@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-ivory: #F7F6F2;
+  --color-limestone: #E6DED0;
+  --color-sandstone: #B9A994;
+  --color-sandstone-dark: #9E8D76;
+  --color-graphite: #55544F;
+  --color-charcoal: #20211F;
+  --color-charcoal-pure: #121312;
+  --color-pure-white: #FFFFFF;
+
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-cinzel), 'Cinzel', serif;
+}
+
+:root {
+  --color-warm-ivory: #F7F6F2;
+  --color-limestone: #E6DED0;
+  --color-sandstone: #B9A994;
+  --color-graphite: #55544F;
+  --color-charcoal: #20211F;
+  --color-pure-white: #FFFFFF;
+}
+
+/* Subtle luxury grain effect overlay helper */
+.grain-overlay {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom delicate luxury scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F6F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B9A994;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #55544F;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
