@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PropertyCard from "@/components/ui/PropertyCard";
@@ -25,22 +26,34 @@ export default function DevelopmentsPage() {
     <>
       <Navbar />
       <main className="flex-1 bg-[#F7F6F2]">
-        {/* Page Header Banner */}
-        <section className="bg-[#20211F] text-[#F7F6F2] pt-20 pb-16 sm:pb-24 border-b border-white/10 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 space-y-4">
+        {/* Cinematic Collection Hero Banner */}
+        <section className="relative w-full py-28 sm:py-36 bg-[#171816] text-[#F7F6F2] overflow-hidden border-b border-white/10">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/media/residences/aurelia-hero.jpg"
+              alt="International Residences Collection"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover opacity-30"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#171816] via-[#171816]/70 to-[#171816]/90" />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 space-y-4 pt-8">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#B9A994] block">
-              WAYSTAR Residential Portfolio
+              Global Residential Portfolio
             </span>
-            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#F7F6F2] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#FFFFFF] tracking-tight">
               International Residences
             </h1>
-            <p className="text-sm sm:text-base text-[#E6DED0]/80 max-w-2xl font-light leading-relaxed">
-              Explore our global collection of bespoke architectural estates. Each development represents an unrepeatable commission between master architects and extraordinary natural environments.
+            <p className="text-sm sm:text-base text-[#E6DED0]/85 max-w-2xl font-light leading-relaxed">
+              Explore our typed portfolio of 6 private architectural estates across Monaco, Kyoto, Lake Como, London, Aspen, and Dubai.
             </p>
           </div>
         </section>
 
-        {/* Content Section */}
+        {/* Content & Discovery Section */}
         <section className="py-12 sm:py-20 max-w-7xl mx-auto px-6 lg:px-12">
           {/* Filter Toolbar */}
           <div className="mb-12">
@@ -69,7 +82,7 @@ export default function DevelopmentsPage() {
               ))}
             </div>
           ) : (
-            <div className="bg-[#20211F] text-[#F7F6F2] border border-white/10 p-12 sm:p-20 text-center space-y-6 max-w-2xl mx-auto">
+            <div className="bg-[#20211F] text-[#F7F6F2] border border-white/10 p-12 sm:p-20 text-center space-y-6 max-w-2xl mx-auto shadow-2xl">
               <div className="w-16 h-16 mx-auto rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-[#B9A994]">
                 <Building2 className="w-7 h-7" />
               </div>
@@ -78,13 +91,13 @@ export default function DevelopmentsPage() {
                   No Matching Residences Found
                 </h3>
                 <p className="text-xs sm:text-sm text-[#E6DED0]/70 leading-relaxed font-light">
-                  We could not find any residences matching your current search parameters. Try expanding your budget ceiling or resetting your filters.
+                  No residences match your current search parameters. Try expanding your budget ceiling or selecting &ldquo;All Locations&rdquo;.
                 </p>
               </div>
               <div>
                 <button
                   onClick={resetFilters}
-                  className="inline-flex items-center space-x-2 bg-[#B9A994] hover:bg-[#F7F6F2] text-[#20211F] text-xs uppercase tracking-[0.2em] px-6 py-3.5 font-medium transition-colors"
+                  className="inline-flex items-center space-x-2 bg-[#B9A994] hover:bg-white text-[#20211F] text-xs uppercase tracking-[0.2em] px-6 py-3.5 font-medium transition-colors"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Reset All Filters</span>

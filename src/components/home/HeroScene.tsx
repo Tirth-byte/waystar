@@ -8,12 +8,12 @@ import { initGSAP, prefersReducedMotion } from "@/lib/animations";
 
 export default function HeroScene() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoError, setVideoError] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     const { gsap } = initGSAP();
@@ -27,20 +27,20 @@ export default function HeroScene() {
 
       tl.fromTo(
         headlineRef.current,
-        { opacity: 0, y: 40 },
-        { opacity: 1, y: 0, duration: 1.2, delay: 0.2 }
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1.4, delay: 0.3 }
       )
         .fromTo(
           subtitleRef.current,
-          { opacity: 0, y: 25 },
-          { opacity: 1, y: 0, duration: 1 },
-          "-=0.7"
+          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0, duration: 1.1 },
+          "-=0.8"
         )
         .fromTo(
           ctaRef.current,
           { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8 },
-          "-=0.6"
+          { opacity: 1, y: 0, duration: 0.9 },
+          "-=0.7"
         );
     }, containerRef);
 
@@ -50,39 +50,32 @@ export default function HeroScene() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-[92vh] min-h-[640px] max-h-[1100px] flex items-end pb-16 sm:pb-24 overflow-hidden bg-[#121312]"
+      className="relative w-full h-screen min-h-[700px] flex items-end pb-16 sm:pb-24 overflow-hidden bg-[#121312]"
     >
-      {/* Background Media Layer: Video with High-Res Image Poster Fallback */}
+      {/* Edge-to-Edge Cinematic Video Layer */}
       <div className="absolute inset-0 z-0">
-        {!videoError && (
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            loop
-            playsInline
-            onCanPlay={() => setVideoReady(true)}
-            onError={() => setVideoError(true)}
-            className={`w-full h-full object-cover object-center transition-opacity duration-1000 ${
-              videoReady ? "opacity-80 scale-100" : "opacity-0"
-            }`}
-          >
-            {/* Architectural cinematic video source */}
-            <source
-              src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-with-glass-facade-41315-large.mp4"
-              type="video/mp4"
-            />
-          </video>
-        )}
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          onCanPlay={() => setVideoLoaded(true)}
+          className={`w-full h-full object-cover object-center transition-opacity duration-1000 ${
+            videoLoaded ? "opacity-90" : "opacity-0"
+          }`}
+        >
+          <source src="/media/videos/hero-villa.mp4" type="video/mp4" />
+        </video>
 
-        {/* Fallback & Preload Poster Image (Always rendered underneath for zero-flicker resilience) */}
+        {/* Local Poster Preload / Fallback Frame */}
         <div
           className={`absolute inset-0 transition-opacity duration-1000 ${
-            videoReady && !videoError ? "opacity-0 pointer-events-none" : "opacity-90"
+            videoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
           }`}
         >
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85"
+            src="/media/posters/hero-villa-poster.jpg"
             alt="WAYSTAR Luxury Architectural Residence"
             fill
             priority
@@ -92,32 +85,34 @@ export default function HeroScene() {
         </div>
 
         {/* Cinematic Multi-Layer Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#20211F] via-[#20211F]/40 to-black/50" />
-        <div className="absolute inset-0 bg-black/25 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#121312] via-[#121312]/30 to-black/60 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/25 mix-blend-multiply pointer-events-none" />
         <div className="absolute inset-0 grain-overlay opacity-30 pointer-events-none" />
       </div>
 
-      {/* Hero Foreground Editorial Content */}
+      {/* Hero Foreground Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <div className="max-w-4xl space-y-6 sm:space-y-8">
           <div className="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.35em] text-[#B9A994]">
             <span className="w-8 h-[1px] bg-[#B9A994]" />
-            <span>Curated Global Portfolio</span>
+            <span>Curated International Flagship</span>
           </div>
 
           <h1
             ref={headlineRef}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#F7F6F2] leading-[1.05] tracking-tight"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#FFFFFF] leading-[1.04] tracking-tight drop-shadow-md"
           >
-            Architecture worth <br />
-            <span className="italic font-normal text-[#E6DED0]">living in.</span>
+            Some places are built. <br />
+            <span className="italic font-normal text-[#E6DED0]">
+              Others are imagined beyond limits.
+            </span>
           </h1>
 
           <p
             ref={subtitleRef}
-            className="text-sm sm:text-base md:text-lg text-[#E6DED0]/90 max-w-2xl font-light leading-relaxed tracking-wide"
+            className="text-sm sm:text-base md:text-lg text-[#E6DED0]/90 max-w-2xl font-light leading-relaxed tracking-wide drop-shadow-sm"
           >
-            WAYSTAR stewards an extraordinary portfolio of residences crafted by the world&apos;s most revered architectural ateliers. Monumental form, tactile materiality, and enduring grace.
+            WAYSTAR conceives architecturally singular residences crafted in communion with the world&apos;s most revered landscapes. Monumental form, elemental materials, and enduring grace.
           </p>
 
           {/* Action Row */}
@@ -127,7 +122,7 @@ export default function HeroScene() {
           >
             <Link
               href="/developments"
-              className="group inline-flex items-center justify-center space-x-3 bg-[#F7F6F2] hover:bg-[#B9A994] text-[#20211F] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 font-medium"
+              className="group inline-flex items-center justify-center space-x-3 bg-[#F7F6F2] hover:bg-[#B9A994] text-[#20211F] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 font-semibold shadow-lg"
             >
               <span>Explore Residences</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
@@ -135,9 +130,9 @@ export default function HeroScene() {
 
             <Link
               href="/about"
-              className="inline-flex items-center justify-center space-x-2 border border-white/30 hover:border-[#B9A994] text-[#F7F6F2] hover:text-[#B9A994] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center justify-center space-x-2 border border-white/30 hover:border-[#B9A994] text-[#FFFFFF] hover:text-[#B9A994] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 bg-black/25 backdrop-blur-sm"
             >
-              <span>Discover WAYSTAR</span>
+              <span>Our Philosophy</span>
             </Link>
           </div>
         </div>

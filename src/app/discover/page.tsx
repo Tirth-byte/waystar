@@ -65,29 +65,29 @@ export default function DiscoverPage() {
       <Navbar />
 
       <main className="flex-1 bg-[#F7F6F2]">
-        {/* Discovery Hero Header */}
-        <section className="bg-[#20211F] text-[#F7F6F2] pt-20 pb-16 sm:pb-24 border-b border-white/10 relative overflow-hidden">
+        {/* Discovery Hero Header with Safe Top Padding */}
+        <section className="bg-[#20211F] text-[#F7F6F2] pt-32 pb-16 sm:pb-24 border-b border-white/10 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 space-y-4">
             <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#B9A994]">
               <Compass className="w-4 h-4" />
               <span>Interactive Discovery Matrix</span>
             </div>
-            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#F7F6F2] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#FFFFFF] tracking-tight">
               Curate Your Living Horizon
             </h1>
-            <p className="text-sm sm:text-base text-[#E6DED0]/80 max-w-2xl font-light leading-relaxed">
+            <p className="text-sm sm:text-base text-[#E6DED0]/85 max-w-2xl font-light leading-relaxed">
               Navigate our portfolio through architectural atmosphere, geography, or material typologies. Find the residence aligned with your lifestyle and architectural taste.
             </p>
           </div>
         </section>
 
-        {/* Atmosphere Curations Bar */}
+        {/* Atmosphere Curations Ribbon */}
         <section className="py-10 bg-[#E6DED0]/50 border-b border-[#E6DED0]">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">
             <div className="flex items-center space-x-2 mb-6">
               <Sparkles className="w-3.5 h-3.5 text-[#55544F]" />
               <span className="text-[10px] uppercase tracking-[0.25em] text-[#55544F]">
-                Quick Atmosphere Presets
+                Atmospheric Presets
               </span>
             </div>
 
@@ -98,7 +98,7 @@ export default function DiscoverPage() {
                   <button
                     key={idx}
                     onClick={item.onClick}
-                    className="group p-5 bg-white border border-[#E6DED0] hover:border-[#20211F] hover:bg-[#20211F] hover:text-[#F7F6F2] transition-all text-left flex flex-col justify-between"
+                    className="group p-5 bg-white border border-[#E6DED0] hover:border-[#20211F] hover:bg-[#20211F] hover:text-[#F7F6F2] transition-all text-left flex flex-col justify-between shadow-sm"
                   >
                     <Icon className="w-5 h-5 text-[#B9A994] mb-3 transition-colors group-hover:text-[#B9A994]" />
                     <div>
@@ -142,7 +142,7 @@ export default function DiscoverPage() {
               ))}
             </div>
           ) : (
-            <div className="bg-[#20211F] text-[#F7F6F2] border border-white/10 p-12 sm:p-20 text-center space-y-6 max-w-2xl mx-auto">
+            <div className="bg-[#20211F] text-[#F7F6F2] border border-white/10 p-12 sm:p-20 text-center space-y-6 max-w-2xl mx-auto shadow-2xl">
               <h3 className="font-serif text-2xl sm:text-3xl font-light">
                 No Residences Match This Discovery Criteria
               </h3>

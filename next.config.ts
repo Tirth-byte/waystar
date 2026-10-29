@@ -21,6 +21,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/waystar",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/WAYSTAR",
+        destination: "/",
+        permanent: false,
+      },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {

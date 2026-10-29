@@ -1,5 +1,13 @@
 import { Property } from "@/types/property";
 
+export const formatPrice = (price: number): string => {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(price);
+};
+
 export const PROPERTIES: Property[] = [
   {
     id: "prop-01",
@@ -12,68 +20,65 @@ export const PROPERTIES: Property[] = [
     propertyType: "Penthouse",
     price: 42500000,
     currency: "USD",
-    formattedPrice: "$42,500,000",
+    formattedPrice: formatPrice(42500000),
     bedrooms: 5,
     bathrooms: 6,
     area: 8400,
     areaUnit: "sq ft",
     completionYear: 2025,
-    architect: "Studio Liaigre & Jean Nouvel Atelier",
+    architect: "Mediterranean Architectural Atelier",
     shortDescription:
-      "A monumental triplex penthouse suspended over the Mediterranean, uniting hand-carved Calacatta marble with panoramic acoustic glazing.",
+      "A monumental triplex penthouse suspended above Avenue Princesse Grace, uniting vein-matched Calacatta marble with unbroken maritime horizons.",
     description: [
-      "The Aurelia represents the pinnacle of Mediterranean architectural modernism. Positioned directly above the glittering coastline of Avenue Princesse Grace, this 8,400-square-foot triplex penthouse commands unbroken 270-degree horizons from Cap Martin to Saint-Jean-Cap-Ferrat.",
-      "Conceived through a master collaboration between Studio Liaigre and Jean Nouvel Atelier, the residence is sculpted from monolithic blocks of vein-matched Calacatta marble, brushed bronze millwork, and aerospace-grade acoustic glass that reduces ocean breeze noise to a gentle whisper.",
-      "The upper terrace features a 18-meter cantilevered infinity lap pool that dissolves visually into the azure Mediterranean horizon, complemented by an outdoor culinary pavilion, private wellness suite, and subterranean three-bay secured automotive gallery."
+      "The Aurelia occupies the crowning three storeys of an oceanfront tower on Avenue Princesse Grace. Conceived as a celebration of Mediterranean horizon light, the residence commands panoramic views spanning from Cap Martin to Saint-Jean-Cap-Ferrat.",
+      "The interior architecture unfolds across 8,400 square feet of curated living volumes. Monolithic Calacatta marble slabs define the double-height great room, paired with brushed bronze millwork and acoustic triple-glazing engineered to preserve quiet stillness above the sea.",
+      "An 18-meter cantilevered infinity lap pool extends toward the water, complemented by an outdoor culinary loggia, private wellness pavilion, and secured three-bay automotive gallery."
     ],
     amenities: [
-      "18m Cantilevered Horizon Pool",
-      "Private High-Speed Elevator with Biometric Access",
-      "Dedicated 24/7 Concierge & Security Staff",
-      "Subterranean Temperature-Controlled Wine Sanctuary (1,200 bottles)",
-      "Wellness Suite with Infrared Sauna & Cold Plunge",
-      "Acoustically Isolated Dolby Atmos Private Cinema",
+      "18m Cantilevered Infinity Lap Pool",
+      "Private High-Speed Direct Access Elevator",
+      "Subterranean Temperature-Zoned Wine Cellar",
+      "Private Wellness Spa with Cold Plunge & Steam Suite",
+      "Acoustically Isolated Private Screening Room",
       "Secured 3-Bay Automotive Gallery",
-      "Integrated Bang & Olufsen Architectural Sound"
+      "Outdoor Culinary Loggia with Marine-Grade Appliances",
+      "Integrated Circadian Architectural Lighting"
     ],
     specifications: [
       { label: "Internal Living Area", value: "8,400 sq ft (780 sq m)" },
       { label: "Exterior Terraces", value: "3,200 sq ft (297 sq m)" },
       { label: "Ceiling Clearance", value: "3.8m – 5.2m Double Height" },
-      { label: "Automotive Storage", value: "3 Dedicated Bays + Lift" },
-      { label: "Climate Architecture", value: "Geothermal Micro-Zoned Radiant" },
-      { label: "Structural Engineering", value: "Reinforced Post-Tensioned Concrete" }
+      { label: "Automotive Storage", value: "3 Dedicated Private Bays" },
+      { label: "Climate Control", value: "Multi-Zoned Geothermal Radiant System" },
+      { label: "Structural Framing", value: "Post-Tensioned Architectural Concrete" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    videoUrl:
-      "https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-with-glass-facade-41315-large.mp4",
+    heroImage: "/media/residences/aurelia-hero.jpg",
+    posterImage: "/media/posters/hero-villa-poster.jpg",
+    videoUrl: "/media/videos/hero-villa.mp4",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=85",
-        caption: "Great Room with 270-degree horizon glazing overlooking the Mediterranean",
+        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85",
+        caption: "Great Room with panoramic horizon glazing overlooking the Mediterranean",
         aspectRatio: "wide"
       },
       {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-        caption: "Minimalist master suite framed by brushed bronze and Belgian linen drapery",
-        aspectRatio: "landscape"
-      },
-      {
         url: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=85",
-        caption: "Monolithic Calacatta marble kitchen featuring bespoke Gaggenau 400 series",
+        caption: "Monolithic Calacatta marble kitchen with bespoke integrated cabinetry",
         aspectRatio: "landscape"
       },
       {
         url: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=85",
-        caption: "Upper sky terrace with cantilevered lap pool and evening sun lounge",
+        caption: "Cantilevered sky terrace and sunset lounge above the water",
         aspectRatio: "portrait"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1600&q=85",
+        caption: "Principal suite with private seaside balcony and custom dressing suite",
+        aspectRatio: "landscape"
       }
     ],
     featured: true,
-    editorialHighlight: "Featured in Architectural Digest — Residence of the Year"
+    editorialHighlight: "Flagship Residential Commission • Monaco"
   },
   {
     id: "prop-02",
@@ -86,53 +91,50 @@ export const PROPERTIES: Property[] = [
     propertyType: "Pavilion Residence",
     price: 18800000,
     currency: "USD",
-    formattedPrice: "$18,800,000",
+    formattedPrice: formatPrice(18800000),
     bedrooms: 4,
     bathrooms: 4,
     area: 6200,
     areaUnit: "sq ft",
     completionYear: 2024,
-    architect: "Kengo Kuma & Associates",
+    architect: "Kyoto Contemporary Woodcraft Atelier",
     shortDescription:
-      "A tranquil forest pavilion harmonizing charred yakisugi cedar, tatami proportions, and hot-spring onsen architecture with serene bamboo views.",
+      "A tranquil forest pavilion harmonizing charred yakisugi cedar, tatami proportions, and natural hot-spring onsen architecture with serene bamboo courtyards.",
     description: [
-      "Nestled against the historic western slopes of Higashiyama, The Kura Sanctuary is an ode to Japanese architectural restraint and biophilic tranquility. Kengo Kuma & Associates crafted the estate around an interior moss rockery and private bamboo preserve.",
-      "The residence employs traditional charred cedar (Yakisugi) facades that naturally resist weathering while acquiring an iridescent graphite patina over generations. Hinoki cypress ceilings perfume the interiors, paired with poured basalt flooring and Shoji screens.",
-      "A natural subterranean thermal spring feeds the private indoor-outdoor onsen bath, hewn from a single 14-ton block of volcanic granite. Floor-to-ceiling glass pavilions open seamlessly onto contemplation decks surrounded by 300-year-old Japanese maples."
+      "Nestled against the wooded foothills of Higashiyama, The Kura Sanctuary is conceived around an interior moss rockery and private bamboo preserve, offering deep visual and acoustic serenity.",
+      "The residence employs traditional charred cedar (Yakisugi) facades that naturally resist weathering while acquiring an iridescent graphite patina over generations. Hinoki cypress ceilings perfume the interiors, paired with poured basalt flooring and sliding Shoji screens.",
+      "A natural subterranean thermal spring feeds the private indoor-outdoor onsen bath, hewn from a single 14-ton block of volcanic granite. Living pavilions open seamlessly onto wooden contemplation decks surrounded by mature Japanese maples."
     ],
     amenities: [
-      "Natural Mineral Onsen Bath (Indoor & Open-Air)",
+      "Natural Geothermal Mineral Onsen (Indoor & Open-Air)",
       "Private Protected Bamboo Grove & Zen Moss Garden",
-      "Traditional Chashitsu (Tea Ceremony Room) by Master Craftsmen",
-      "Yakisugi Charred Cedar Weatherproof Exterior",
-      "Heated Basalt & Hinoki Cypress Flooring",
-      "Subterranean Meditation Pavilion & Library",
-      "Continuous High-Efficiency Air Filtration with Cedar Scenting",
-      "Discrete Guard House & Private Security Gate"
+      "Traditional Chashitsu (Tea Ceremony Pavilion) by Master Joiners",
+      "Yakisugi Charred Cedar Weatherproof Exterior Cladding",
+      "Radiant Heated Basalt & Hinoki Cypress Flooring",
+      "Subterranean Meditation Chamber & Cedar Library",
+      "High-Efficiency Particulate Air Filtration with Hinoki Scenting",
+      "Enclosed Timber Carriage Pavilion for 2 Vehicles"
     ],
     specifications: [
       { label: "Internal Living Area", value: "6,200 sq ft (576 sq m)" },
       { label: "Private Garden Grounds", value: "1.4 Acres (5,660 sq m)" },
       { label: "Timber Structure", value: "Sustainably Harvested Yoshino Cedar" },
       { label: "Thermal Spring", value: "42°C Natural Geothermal Source" },
-      { label: "Acoustic Rating", value: "Absolute Serenity (<20dB ambient)" },
+      { label: "Acoustic Rating", value: "Ambient Sound Level Below 20dB" },
       { label: "Automotive Storage", value: "2 Enclosed Timber Pavilion Bays" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80",
-    videoUrl:
-      "https://assets.mixkit.co/videos/preview/mixkit-serene-modern-villa-surrounded-by-nature-42907-large.mp4",
+    heroImage: "/media/residences/kura-hero.jpg",
+    posterImage: "/media/posters/interior-living-poster.jpg",
+    videoUrl: "/media/videos/interior-living.mp4",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=2000&q=85",
+        url: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85",
         caption: "Main pavilion opening toward the protected bamboo grove",
         aspectRatio: "wide"
       },
       {
-        url: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=85",
-        caption: "Indoor contemplation pavilion with charred yakisugi detailing",
+        url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
+        caption: "Minimalist interior with natural Hinoki wood screens and tatami flooring",
         aspectRatio: "landscape"
       },
       {
@@ -141,13 +143,13 @@ export const PROPERTIES: Property[] = [
         aspectRatio: "landscape"
       },
       {
-        url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
-        caption: "Handcrafted tea room with tatami mats and concealed garden aperture",
+        url: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=85",
+        caption: "Evening twilight over the courtyard contemplation deck",
         aspectRatio: "portrait"
       }
     ],
     featured: true,
-    editorialHighlight: "Pritzker Architecture Selection — Sustainable Modernity"
+    editorialHighlight: "Biophilic Architectural Conception • Kyoto"
   },
   {
     id: "prop-03",
@@ -160,66 +162,65 @@ export const PROPERTIES: Property[] = [
     propertyType: "Waterfront Villa",
     price: 34000000,
     currency: "USD",
-    formattedPrice: "$34,000,000",
+    formattedPrice: formatPrice(34000000),
     bedrooms: 6,
     bathrooms: 7,
     area: 11200,
     areaUnit: "sq ft",
     completionYear: 2023,
-    architect: "Studio Peregalli & Claudio Silvestrin",
+    architect: "Lombard Restoration Studio",
     shortDescription:
-      "A grand 19th-century waterfront palazzo meticulously reborn with minimalist subterranean wellness vaults and private Riva speedboat dock.",
+      "A grand 19th-century waterfront palazzo meticulously reborn with subterranean stone wellness vaults and private speedboat jetty.",
     description: [
-      "Perched on the coveted western shore of Tremezzina, Villa Belvedere enjoys unobstructed views across the tranquil waters toward Bellagio. Originally built in 1892 for a Lombard silk dynasty, the estate has undergone a seven-year architectural restoration led by Studio Peregalli.",
-      "The estate marries heritage stucco work, soaring 4.6-meter vaulted ceilings, and antique Venetian terrazzo with an uncompromising modern subterranean wing carved into the granite lakeside bedrock.",
-      "The private deepwater jetty accommodates two 40-foot vessels, while the private botanical park boasts century-old Lebanese cedars, tiered olive groves, and a heated black porphyry swimming pool flush with the lake's water level."
+      "Perched on the western shore of Tremezzina, Villa Belvedere commands unobstructed views across Lake Como toward the promontory of Bellagio. Originally constructed in 1892, the estate has undergone a comprehensive architectural restoration.",
+      "The estate unites heritage lime stucco, 4.6-meter vaulted ceilings, and Venetian terrazzo with a contemporary subterranean wellness wing carved directly into the lakeside bedrock.",
+      "A private deepwater jetty accommodates two 40-foot vessels, while the private botanical park features century-old Lebanese cedars, tiered olive groves, and a heated black porphyry swimming pool flush with the lake water level."
     ],
     amenities: [
-      "Private Deepwater Mooring Jetty with Riva Yacht Lift",
-      "Subterranean Bedrock Spa with Roman Heated Tepidarium",
+      "Private Deepwater Mooring Jetty with Automated Boat Lift",
+      "Subterranean Bedrock Wellness Spa with Heated Tepidarium",
       "Heated Black Porphyry Infinity Pool at Water's Edge",
-      "Restored 19th-Century Frescoes & Venetian Terrazzo",
-      "Private 2.2-Acre Lakeside Botanical Parkland",
-      "Helipad Landing Rights on Adjoining Grounds",
-      "Commercial Chef's Kitchen with Molteni Cooking Suite",
-      "Guest Staff Quarters with Independent Access"
+      "Conserved 19th-Century Stucco Work & Venetian Terrazzo",
+      "2.2-Acre Lakeside Botanical Parkland with Olive Terraces",
+      "Commercial Chef's Kitchen with Custom Molteni Suite",
+      "Two Independent Detached Guest Suites with Private Entrances",
+      "Subterranean Secured 4-Vehicle Gallery"
     ],
     specifications: [
       { label: "Internal Living Area", value: "11,200 sq ft (1,040 sq m)" },
       { label: "Lakeside Parkland", value: "2.2 Acres (8,900 sq m)" },
-      { label: "Waterfront Shoreline", value: "120 Linear Meters" },
+      { label: "Waterfront Shoreline", value: "120 Linear Meters Direct Lake Access" },
       { label: "Watercraft Mooring", value: "Dual Slip Covered Boathouse" },
-      { label: "Ceiling Height", value: "Up to 4.6m Original Vaulted" },
+      { label: "Ceiling Height", value: "Up to 4.6m Vaulted Ceilings" },
       { label: "Guest Residences", value: "2 Detached Independent Suites" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/media/residences/belvedere-hero.jpg",
+    posterImage: "/media/posters/hero-villa-poster.jpg",
+    videoUrl: "/media/videos/hero-villa.mp4",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85",
-        caption: "Grand salon opening onto the stone loggia and Lake Como panorama",
+        url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85",
+        caption: "Grand stone loggia looking across Lake Como toward Bellagio",
         aspectRatio: "wide"
       },
       {
         url: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85",
-        caption: "Subterranean Roman-style heated pool carved directly into rock",
+        caption: "Subterranean Roman-inspired heated pool carved into lakeside bedrock",
         aspectRatio: "landscape"
       },
       {
-        url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=85",
-        caption: "Private stone staircase descending to the private Riva boat dock",
+        url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1600&q=85",
+        caption: "Restored grand salon featuring original ceiling vaults and Venetian terrazzo",
         aspectRatio: "landscape"
       },
       {
-        url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
-        caption: "Master bathroom clad in honed Fior di Bosco marble",
+        url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
+        caption: "Lakeside dining terrace nestled among ancient olive trees",
         aspectRatio: "portrait"
       }
     ],
     featured: true,
-    editorialHighlight: "World Luxury Living Award — Exceptional Heritage Restoration"
+    editorialHighlight: "Historic Waterfront Restoration • Lake Como"
   },
   {
     id: "prop-04",
@@ -232,66 +233,64 @@ export const PROPERTIES: Property[] = [
     propertyType: "Historic Townhouse",
     price: 28500000,
     currency: "USD",
-    formattedPrice: "$28,500,000",
+    formattedPrice: formatPrice(28500000),
     bedrooms: 5,
     bathrooms: 6,
     area: 7850,
     areaUnit: "sq ft",
     completionYear: 2024,
-    architect: "John Pawson Architects & David Chipperfield",
+    architect: "Mayfair Heritage & Minimalist Studio",
     shortDescription:
-      "A Portland stone Georgian facade concealing radical sculptural interior architecture, centered around an artisan bronze spiral staircase.",
+      "A conserved Portland stone Georgian facade concealing radical sculptural interior architecture, centered around an artisan bronze spiral staircase.",
     description: [
-      "Overlooking the secluded plane trees of Mount Street Gardens, The One Mayfair bridges London's aristocratic history with radical minimalist sculpture. Behind an impeccably conserved Grade-II listed Portland stone facade lies an ultra-contemporary six-storey sanctuary.",
-      "Pritzker laureate David Chipperfield and minimalist master John Pawson engineered an interior atrium bathed in diffused natural zenith light, anchored by a monolithic, freestanding helical staircase cast in hand-patinated bronze.",
-      "The subterranean levels feature a private 12-meter basalt swimming pool, biometric vault room, private screening cinema, and climate-controlled humidor, offering absolute privacy in London's premier luxury postal code."
+      "Overlooking the quiet trees of Mount Street Gardens, The One Mayfair bridges London's architectural history with contemporary sculpture. Behind a conserved Grade-II listed Portland stone facade lies an ultra-modern six-storey private residence.",
+      "An interior atrium bathed in natural zenith light anchors the home, centered around a freestanding helical staircase cast in hand-patinated architectural bronze.",
+      "Subterranean levels feature a private 12-meter basalt swimming pool, biometric art storage vault, private screening room, and climate-controlled humidor, providing complete privacy in London's premier residential enclave."
     ],
     amenities: [
       "Freestanding Hand-Patinated Bronze Helical Staircase",
       "Subterranean 12m Basalt Lap Pool with Starlight Ceiling",
-      "Private Access to Gated Mount Street Gardens",
-      "Biometric High-Security Vault & Art Storage",
-      "10-Seat DCI-Compliant Private Screening Cinema",
-      "Bespoke Boffi Kitchen with Pietra d'Avola Stone",
+      "Direct Gated Access to Mount Street Gardens",
+      "Biometric High-Security Art & Asset Storage Vault",
+      "10-Seat Acoustically Isolated Screening Room",
+      "Bespoke Kitchen with Honed Pietra d'Avola Stone",
       "Automated Hydraulic Car Lift with Street-Level Discretion",
-      "Full Crestron Home Automation with Tunable Circadian Lighting"
+      "Integrated Home Automation with Circadian Lighting"
     ],
     specifications: [
       { label: "Internal Living Area", value: "7,850 sq ft (729 sq m)" },
-      { label: "Storeys", value: "6 Levels Served by Glass Elevator" },
+      { label: "Storeys", value: "6 Levels Served by Glass Passenger Lift" },
       { label: "Heritage Classification", value: "Grade-II Listed Conserved Facade" },
       { label: "Automotive Storage", value: "2-Car Subterranean Hydraulic Lift" },
-      { label: "Acoustic Engineering", value: "Independent Floating Box Structure" },
+      { label: "Acoustic Engineering", value: "Independent Acoustically Decoupled Core" },
       { label: "Wine & Spirits Storage", value: "Dual-Zone Humidor & 800-Bottle Cellar" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/media/residences/mayfair-hero.jpg",
+    posterImage: "/media/posters/interior-living-poster.jpg",
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85",
-        caption: "Sculptural bronze staircase ascending through the illuminated central atrium",
+        caption: "Central light atrium with sculptural bronze spiral staircase",
         aspectRatio: "wide"
       },
       {
         url: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1600&q=85",
-        caption: "Double-aspect reception room with bespoke herringbone French oak floors",
+        caption: "Double-aspect reception room with herringbone French oak flooring",
+        aspectRatio: "landscape"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=1600&q=85",
+        caption: "Private study and library overlooking Mount Street foliage",
         aspectRatio: "landscape"
       },
       {
         url: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=85",
-        caption: "Custom Pietra d'Avola kitchen island crafted as a singular stone sculpture",
-        aspectRatio: "landscape"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-        caption: "Principal bedroom suite with views overlooking historic garden foliage",
+        caption: "Pietra d'Avola kitchen island sculpted from solid Italian stone",
         aspectRatio: "portrait"
       }
     ],
     featured: false,
-    editorialHighlight: "Architectural Digest International Feature"
+    editorialHighlight: "Urban Heritage Redefined • Mayfair, London"
   },
   {
     id: "prop-05",
@@ -304,28 +303,28 @@ export const PROPERTIES: Property[] = [
     propertyType: "Alpine Sanctuary",
     price: 26000000,
     currency: "USD",
-    formattedPrice: "$26,000,000",
+    formattedPrice: formatPrice(26000000),
     bedrooms: 5,
     bathrooms: 5,
     area: 9100,
     areaUnit: "sq ft",
     completionYear: 2024,
-    architect: "Olson Kundig Architects",
+    architect: "Aspen Alpine Architectural Atelier",
     shortDescription:
-      "A monumental alpine residence of board-formed concrete, blackened steel, and heated thermal glass framing Aspen Mountain's dramatic summits.",
+      "A monumental alpine residence of board-formed concrete, blackened steel, and heated thermal glass framing Aspen Mountain's dramatic peaks.",
     description: [
-      "Engineered into the granite slope of prestigious Red Mountain, Solaris Pavilion redefines Rocky Mountain architecture. Rather than traditional log cabin cliches, Olson Kundig designed an assertive modernist pavilion constructed of board-formed architectural concrete, standing-seam copper, and triple-pane thermal glass.",
-      "Massive motorized glass walls retract seamlessly at the push of a button, connecting the 35-foot-high great room directly to cantilevered heated stone terraces equipped with dual fire cauldrons and a stainless steel infinity hot tub.",
-      "The residence includes a heated indoor ski lounge with boot warmers and direct trail access, radiant geothermal heated floors throughout, and a 20-foot dual-sided granite fireplace anchoring the living salon."
+      "Engineered into the granite slope of prestigious Red Mountain, Solaris Pavilion redefines high-altitude living. Constructed from board-formed architectural concrete, weathered copper, and triple-pane thermal glass, the home frames unbroken vistas of Aspen Mountain and the Continental Divide.",
+      "Retractable motorized glass walls connect the 35-foot great room directly to cantilevered heated stone terraces equipped with dual fire cauldrons and a stainless steel infinity hot tub.",
+      "The residence includes a heated private ski lounge with boot warming suites and direct trail access, radiant geothermal heated floors throughout, and a 20-foot dual-sided granite hearth."
     ],
     amenities: [
       "Direct Ski-In / Ski-Out Access via Private Heated Trail",
       "Heated Stainless Steel Cantilevered Alpine Hot Tub",
-      "35-Foot Great Room with Motorized Guillotine Glass Walls",
-      "Custom Ski & Snowboard Prep Lounge with Boot Warming Suite",
+      "35-Foot Great Room with Retractable Thermal Glazing",
+      "Custom Ski Preparation Lounge with Boot Warming Suite",
       "Dual-Sided 20ft Granite Hearth with Artisan Fire Cauldrons",
       "Whole-Home Oxygenation System for High-Altitude Comfort",
-      "Heated 4-Car Motor Court with Snow-Melt Geothermal System",
+      "Heated 4-Car Motor Court with Geothermal Snow-Melt System",
       "Panoramic Views of Aspen Mountain & Continental Divide"
     ],
     specifications: [
@@ -336,34 +335,32 @@ export const PROPERTIES: Property[] = [
       { label: "Glazing System", value: "Triple-Glazed Argon Insulated Glass" },
       { label: "Heating Technology", value: "100% Geothermal Closed-Loop Array" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    heroImage: "/media/residences/solaris-hero.jpg",
+    posterImage: "/media/posters/hero-villa-poster.jpg",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85",
-        caption: "Soaring 35ft great room framing the snow-covered peaks of Aspen",
+        url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=85",
+        caption: "Heated outdoor terrace with fire cauldron framing the snowy peaks",
         aspectRatio: "wide"
       },
       {
-        url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85",
-        caption: "Outdoor heated terrace with stainless steel plunge and granite fire table",
+        url: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1600&q=85",
+        caption: "Double-height living salon with exposed board-formed concrete and hearth",
         aspectRatio: "landscape"
       },
       {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-        caption: "Principal suite with private balcony and suspended steel fireplace",
+        url: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1600&q=85",
+        caption: "Minimalist alpine kitchen in smoked oak and honed granite",
         aspectRatio: "landscape"
       },
       {
-        url: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=85",
-        caption: "Minimalist mountain kitchen in smoked oak and honed basalt",
+        url: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1600&q=85",
+        caption: "Exterior pavilion nestled into the Red Mountain pine forest",
         aspectRatio: "portrait"
       }
     ],
     featured: false,
-    editorialHighlight: "Mountain Architecture Honor Award"
+    editorialHighlight: "Mountain Architecture Study • Aspen"
   },
   {
     id: "prop-06",
@@ -376,29 +373,29 @@ export const PROPERTIES: Property[] = [
     propertyType: "Sky Estate",
     price: 38000000,
     currency: "USD",
-    formattedPrice: "$38,000,000",
+    formattedPrice: formatPrice(38000000),
     bedrooms: 6,
     bathrooms: 7,
     area: 12500,
     areaUnit: "sq ft",
     completionYear: 2025,
-    architect: "Foster + Partners & Patricia Urquiola",
+    architect: "Emirates Waterfront Atelier",
     shortDescription:
       "A transcendent double-height sky mansion on Jumeirah Bay Island featuring a private cantilevered infinity pool 40 storeys above the Arabian Gulf.",
     description: [
-      "Commanding the ultra-exclusive shores of Jumeirah Bay Island, The Lumina is an architectural tour-de-force conceived by Foster + Partners. Suspended forty floors into the sky, this 12,500-square-foot duplex penthouse captures the Arabian Gulf and the iconic skyline of Downtown Dubai.",
-      "Interior architecture by Patricia Urquiola introduces fluid, organic curves, brushed champagne metals, and hand-carved Roman travertine screening mashrabiya elements that filter the desert light into delicate lace-like patterns.",
-      "The private sky deck hosts a 20-meter glass-bottomed infinity pool cantilevered directly over the azure waters below. A private 65-foot yacht berth at the Jumeirah Bay Marina is deeded with the residence."
+      "Commanding the exclusive shores of Jumeirah Bay Island, The Lumina is an architectural tour-de-force. Suspended forty storeys above sea level, this 12,500-square-foot duplex penthouse captures the Arabian Gulf and the iconic skyline of Dubai.",
+      "The interior architecture introduces fluid, organic curves, brushed champagne metals, and hand-carved Roman travertine screening elements that filter sunlight into delicate geometric patterns.",
+      "The private sky terrace features a 20-meter glass-bottomed infinity pool cantilevered directly over the azure waters below, complemented by a private deeded 65-foot yacht berth at the marina."
     ],
     amenities: [
       "Cantilevered Glass-Bottom Sky Pool 40 Floors Above Sea Level",
       "Deeded 65-Foot Superyacht Berth at Jumeirah Bay Marina",
-      "Private High-Speed Pneumatic Elevator with Keycard & Iris Lock",
+      "Private High-Speed Elevator with Biometric Access",
       "Travertine Mashrabiya Solar Shading Screens",
       "2-Level Grand Salon with 7.5m Double-Height Ceilings",
       "Master Spa with Steam Chamber, Cryo-Chamber & Ice Fountain",
-      "Secure Subterranean 4-Bay Air-Conditioned Showroom",
-      "Dedicated Butler Quarters & Private Catering Pantry"
+      "Secured Subterranean 4-Bay Air-Conditioned Showroom",
+      "Dedicated Butler Quarters & Private Service Pantry"
     ],
     specifications: [
       { label: "Internal Living Area", value: "12,500 sq ft (1,161 sq m)" },
@@ -408,36 +405,33 @@ export const PROPERTIES: Property[] = [
       { label: "Climate Control", value: "Solar Micro-Zoning with Air Ionization" },
       { label: "Automotive Storage", value: "4 Air-Conditioned Display Bays" }
     ],
-    heroImage:
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=2400&q=85",
-    posterImage:
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-    videoUrl:
-      "https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-with-glass-facade-41315-large.mp4",
+    heroImage: "/media/residences/lumina-hero.jpg",
+    posterImage: "/media/posters/hero-villa-poster.jpg",
+    videoUrl: "/media/videos/hero-villa.mp4",
     galleryImages: [
       {
-        url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2000&q=85",
-        caption: "Double-height grand salon bathed in filtered Arabian sunlight",
+        url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=2000&q=85",
+        caption: "Cantilevered glass sky pool overlooking the Arabian Gulf",
         aspectRatio: "wide"
       },
       {
+        url: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85",
+        caption: "Double-height grand salon bathed in filtered sunlight",
+        aspectRatio: "landscape"
+      },
+      {
+        url: "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1600&q=85",
+        caption: "Sunset view from the upper sky deck looking toward the marina",
+        aspectRatio: "landscape"
+      },
+      {
         url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85",
-        caption: "Cantilevered glass sky pool overlooking the gulf horizon",
-        aspectRatio: "landscape"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1600&q=85",
-        caption: "Kitchen pavilion in champagne bronze and white statuario marble",
-        aspectRatio: "landscape"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85",
-        caption: "Principal suite dressing room in fluted glass and custom leather",
+        caption: "Travertine culinary pavilion in champagne bronze and statuario stone",
         aspectRatio: "portrait"
       }
     ],
     featured: true,
-    editorialHighlight: "Middle East Architectural Icon of the Decade"
+    editorialHighlight: "Waterfront Sky Estate • Dubai"
   }
 ];
 

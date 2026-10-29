@@ -16,7 +16,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
   const saved = isFavourite(property.id);
 
   return (
-    <div className="group relative bg-[#20211F] text-[#F7F6F2] overflow-hidden flex flex-col transition-all duration-500 hover:shadow-2xl border border-white/10 hover:border-[#B9A994]/50">
+    <article className="group relative bg-[#20211F] text-[#F7F6F2] overflow-hidden flex flex-col transition-all duration-500 hover:shadow-2xl border border-white/10 hover:border-[#B9A994]/60">
       {/* Media Container with Image & Hover Depth */}
       <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full overflow-hidden bg-[#121312]">
         <Image
@@ -28,12 +28,12 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
 
-        {/* Ambient Gradient for legibility */}
+        {/* Gradient Scrim for Contrast */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#20211F] via-transparent to-black/30 pointer-events-none" />
 
-        {/* Top Badges: Type & Save Toggle */}
+        {/* Top Badges: Typology & Save Action */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-          <span className="text-[10px] tracking-[0.25em] uppercase px-3 py-1 bg-[#20211F]/80 backdrop-blur-md text-[#B9A994] border border-white/15">
+          <span className="text-[10px] tracking-[0.25em] uppercase px-3 py-1 bg-[#20211F]/85 backdrop-blur-md text-[#B9A994] border border-white/15">
             {property.propertyType}
           </span>
 
@@ -47,7 +47,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
             className={`p-2.5 backdrop-blur-md transition-all duration-300 border ${
               saved
                 ? "bg-[#B9A994] text-[#20211F] border-[#B9A994]"
-                : "bg-[#20211F]/70 text-[#F7F6F2] hover:text-[#B9A994] border-white/20"
+                : "bg-[#20211F]/75 text-[#F7F6F2] hover:text-[#B9A994] border-white/20"
             }`}
           >
             <Bookmark className={`w-4 h-4 ${saved ? "fill-current" : ""}`} />
@@ -57,7 +57,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
         {/* Editorial Highlight badge if present */}
         {property.editorialHighlight && (
           <div className="absolute bottom-3 left-4 right-4 pointer-events-none">
-            <span className="text-[10px] uppercase tracking-wider text-[#B9A994]/90 bg-black/60 backdrop-blur-sm px-2.5 py-1">
+            <span className="text-[9px] uppercase tracking-wider text-[#B9A994] bg-black/70 backdrop-blur-sm px-2.5 py-1 inline-block border border-white/10">
               {property.editorialHighlight}
             </span>
           </div>
@@ -68,27 +68,27 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
       <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
         <div className="space-y-3">
           <div className="flex items-baseline justify-between gap-2">
-            <span className="text-[11px] uppercase tracking-[0.25em] text-[#B9A994]">
+            <span className="text-[11px] uppercase tracking-[0.25em] text-[#B9A994] font-medium">
               {property.city}, {property.country}
             </span>
-            <span className="font-serif text-lg sm:text-xl font-light text-[#F7F6F2]">
+            <span className="font-serif text-lg sm:text-xl font-light text-[#FFFFFF]">
               {property.formattedPrice}
             </span>
           </div>
 
-          <h3 className="font-serif text-2xl sm:text-2xl text-[#F7F6F2] font-normal group-hover:text-[#B9A994] transition-colors leading-tight">
+          <h3 className="font-serif text-2xl text-[#FFFFFF] font-normal group-hover:text-[#B9A994] transition-colors leading-tight">
             <Link href={`/developments/${property.slug}`} className="focus:outline-none">
               <span className="absolute inset-0 z-0" aria-hidden="true" />
               {property.name}
             </Link>
           </h3>
 
-          <p className="text-xs text-[#E6DED0]/75 line-clamp-2 leading-relaxed font-light">
+          <p className="text-xs text-[#E6DED0]/80 line-clamp-2 leading-relaxed font-light">
             {property.shortDescription}
           </p>
         </div>
 
-        {/* Specs & Link footer */}
+        {/* Specifications & Navigation Footer */}
         <div className="mt-6 pt-5 border-t border-white/10 flex items-center justify-between text-xs text-[#B9A994]">
           <div className="flex items-center space-x-4 text-[11px] font-sans">
             <span className="flex items-center space-x-1" title={`${property.bedrooms} Bedrooms`}>
@@ -105,12 +105,12 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
             </span>
           </div>
 
-          <div className="relative z-10 flex items-center space-x-1 text-xs uppercase tracking-[0.2em] text-[#F7F6F2] group-hover:text-[#B9A994] transition-colors font-medium">
+          <div className="relative z-10 flex items-center space-x-1 text-xs uppercase tracking-[0.2em] text-[#FFFFFF] group-hover:text-[#B9A994] transition-colors font-medium">
             <span>Explore</span>
             <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 }

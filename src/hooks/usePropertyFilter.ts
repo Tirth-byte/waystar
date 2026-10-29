@@ -115,3 +115,4 @@ export function usePropertyFilter(initialProperties: Property[] = PROPERTIES) {
     matchCount: filteredProperties.length,
   };
 }
+
