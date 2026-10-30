@@ -66,3 +66,4 @@ While the initial iteration established a functional vertical slice (routes, loc
 3. **Rebuild Developments & Detail Pages:** Clean layout, no text collisions, unique high-res galleries.
 4. **Cleanse Data & Typography:** Strict `Intl.NumberFormat`, pure architectural language, zero backslash artifacts.
 5. **Quality Assurance & Verification:** Test all viewports (mobile, tablet, desktop) and verify 0 lint errors, 0 type errors, clean production build.
+

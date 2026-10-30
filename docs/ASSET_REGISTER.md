@@ -1,44 +1,51 @@
-# WAYSTAR — Asset Register
-
-This document tracks all visual media assets (video, photography, vectors, typography) utilized throughout the WAYSTAR digital flagship.
-
-## Verification Status Definitions:
-- **Verified Local**: Asset is physically present in the repository (`public/media/...`), verified for playback, format, and zero-latency serving.
-- **Verified Remote (Licensed CDN)**: Curated high-resolution imagery from open collections (Unsplash / Pexels) with verified HTTPS headers.
+# WAYSTAR — Master Asset Register (V2 Flagship)
+**Document Reference:** `docs/ASSET_REGISTER.md`  
+**Current Revision:** Master Prompt 012 — Complete From-Scratch Reconstruction (Dubai × New York)  
+**Media Delivery Standard:** Locally-hosted 1080p H.264 web derivatives with audio stripped (`-an`), `-movflags +faststart`, and paired lossless WebP poster frames.  
+**Archived Predecessors:** Legacy V1 assets preserved on git branch `archive/waystar-v1`.
 
 ---
 
-## 1. Verified Local Video & Poster Assets
+## 1. Verified Active Cinematic Video Library (`public/media/v2/`)
 
-| Asset ID | Filename / URI | Source / Provider | License | Purpose / Scene | Verification |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `VID-001` | `/media/videos/hero-villa.mp4` (21MB) | Pexels (#4407791) | Pexels Free License | Scene 01: The Opening (Homepage Hero) | Verified Local (MP4 1080p) |
-| `VID-002` | `/media/videos/interior-living.mp4` (22MB) | Pexels (#38675643) | Pexels Free License | Scene 05: The Art of Living (Interior Motion) | Verified Local (MP4 1080p) |
-| `PST-001` | `/media/posters/hero-villa-poster.jpg` | Unsplash (`photo-1600596542815-ffad4c1539a9`) | Unsplash Commercial License | Hero Video Fallback & Preload Frame | Verified Local (WebP/JPG) |
-| `PST-002` | `/media/posters/interior-living-poster.jpg` | Unsplash (`photo-1600210492486-724fe5c67fb0`) | Unsplash Commercial License | Interior Video Fallback Frame | Verified Local (WebP/JPG) |
+All active videos were sourced from Pexels under the Pexels Free Commercial Use License, inspected via `ffprobe` for technical compliance, visually evaluated via contact sheet frame extraction, and transcoded to optimized web derivatives.
 
----
-
-## 2. Verified Local Architectural Residence Photography
-
-| Asset ID | Filename / URI | Residence / Context | Creator & Source | Dimensions / Specs | Verification |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| `RES-001` | `/media/residences/aurelia-hero.jpg` | The Aurelia, Monaco | Unsplash (`photo-1600596542815-ffad4c1539a9`) | 2400x1600 WebP/JPG | Verified Local |
-| `RES-002` | `/media/residences/kura-hero.jpg` | The Kura Sanctuary, Kyoto | Unsplash (`photo-1509198397868-475647b2a1e5`) | 2400x1600 WebP/JPG | Verified Local |
-| `RES-003` | `/media/residences/belvedere-hero.jpg` | Villa Belvedere, Lake Como | Unsplash (`photo-1580587771525-78b9dba3b914`) | 2400x1600 WebP/JPG | Verified Local |
-| `RES-004` | `/media/residences/mayfair-hero.jpg` | The One Mayfair, London | Unsplash (`photo-1577495508048-b635879837f1`) | 2400x1600 WebP/JPG | Verified Local |
-| `RES-005` | `/media/residences/solaris-hero.jpg` | Solaris Pavilion, Aspen | Unsplash (`photo-1518780664697-55e3ad937233`) | 2400x1600 WebP/JPG | Verified Local |
-| `RES-006` | `/media/residences/lumina-hero.jpg` | The Lumina Waterfront, Dubai | Unsplash (`photo-1512918728675-ed5a9ecdebfd`) | 2400x1600 WebP/JPG | Verified Local |
+| Asset ID | Web Derivative Path | Paired WebP Poster | Source Res / Codec | Delivery Res / Size | Destination Scene / Page | Architectural Theme |
+|:---|:---|:---|:---|:---|:---|:---|
+| `DXB-01` | `/media/v2/dubai/dubai-marina-aerial.mp4` | `dubai-marina-aerial.webp` | 3840×2160 • H.264 | 1920×1080 • 5.5 MB | Homepage Scene 01: Arrival Hero | Dubai Marina canal towers, soaring bridges, berthed yachts |
+| `DXB-02` | `/media/v2/dubai/dubai-yachts-skyline.mp4` | `dubai-yachts-skyline.webp` | 3840×2160 • H.264 | 1920×1080 • 24.0 MB | Scene 03: Residence Cinema (Dubai) | Elevated marina promenade, luxury motor yachts & supertall towers |
+| `DXB-03` | `/media/v2/dubai/dubai-sunset-marina.mp4` | `dubai-sunset-marina.webp` | 3840×2160 • H.264 | 1920×1080 • 14.0 MB | Scene 02 & Philosophy Hero | Golden hour waterfront reflections across Dubai residential spires |
+| `DXB-04` | `/media/v2/dubai/dubai-night-skyscrapers.mp4` | `dubai-night-skyscrapers.webp` | 3840×2160 • H.264 | 1920×1080 • 23.0 MB | Scene 06: Nocturne Finale | Nocturnal illuminated towers, glass reflections, nocturnal skyline |
+| `NY-01-ALT` | `/media/v2/new-york/manhattan-sunset-skyline.mp4` | `manhattan-sunset-skyline.webp` | 3840×2160 • H.264 | 1920×1080 • 6.2 MB | Scene 02: New York Selector Canvas | Hudson River & Manhattan West Side skyline at sunset |
+| `NY-02` | `/media/v2/new-york/manhattan-midtown-aerial.mp4` | `manhattan-midtown-aerial.webp` | 3840×2160 • H.264 | 1920×1080 • 5.0 MB | Scene 03 & Contact Hero | Midtown Manhattan & Billionaires' Row architectural flyover |
+| `NY-04-ALT` | `/media/v2/new-york/manhattan-night-architecture.mp4` | `manhattan-night-architecture.webp` | 3840×2160 • H.264 | 1920×1080 • 5.0 MB | Residences Catalogue Hero | Lit office and penthouse windows, geometric skyscraper facade |
+| `NY-05` | `/media/v2/new-york/manhattan-night-skyline.mp4` | `manhattan-night-skyline.webp` | 3840×2160 • H.264 | 1920×1080 • 34.0 MB | Scene 06: Nocturne Finale (NY) | Manhattan nocturnal skyline, Empire State Building, dark horizon |
+| `DXB-05-ALT` | `/media/v2/interiors/modern-luxury-interior.mp4` | `modern-luxury-interior.webp` | 3840×2160 • H.264 | 1920×1080 • 5.8 MB | Scene 04: The Art of Living | Double-height living salon, travertine hearth, calm interior glide |
 
 ---
 
-## 3. High-Resolution Gallery Photography (Unique per Property)
+## 2. Curated Architectural Residence Photography (`public/media/residences/`)
 
-| Residence Slug | Gallery Image 1 | Gallery Image 2 | Gallery Image 3 | Gallery Image 4 |
-| :--- | :--- | :--- | :--- | :--- |
-| `the-aurelia-monaco` | `photo-1600607687939-ce8a6c25118c` (Living Room) | `photo-1600566753376-12c8ab7fb75b` (Kitchen) | `photo-1512917774080-9991f1c4c750` (Sunset Deck) | `photo-1600607687644-c7171b42498f` (Suite) |
-| `the-kura-sanctuary-kyoto` | `photo-1590381105924-c72589b9ef3f` (Bamboo Grove) | `photo-1618221195710-dd6b41faaea6` (Tatami/Wood) | `photo-1600573472550-8090b5e0745e` (Onsen Bath) | `photo-1503899036084-c55cdd92da26` (Courtyard Deck) |
-| `villa-belvedere-lake-como` | `photo-1600585154526-990dced4db0d` (Stone Loggia) | `photo-1600566753190-17f0baa2a6c3` (Bedrock Spa) | `photo-1513694203232-719a280e022f` (Salon Fresco) | `photo-1600585154340-be6161a56a0c` (Olive Terrace) |
-| `the-one-mayfair-london` | `photo-1600210492486-724fe5c67fb0` (Helical Stair) | `photo-1600566752355-35792bedcfea` (Herringbone Oak) | `photo-1600585152220-90363fe7e115` (Private Study) | `photo-1600566753376-12c8ab7fb75b` (Pietra Stone) |
-| `solaris-pavilion-aspen` | `photo-1542314831-068cd1dbfeeb` (Heated Terrace) | `photo-1600607687644-c7171b42498f` (Granite Hearth) | `photo-1600566753086-00f18fb6b3ea` (Blackened Steel) | `photo-1518780664697-55e3ad937233` (Pine Pavilion) |
-| `the-lumina-waterfront-dubai`| `photo-1582268611958-ebfd161ef9cf` (Cantilevered Pool)| `photo-1600607687920-4e2a09cf159d` (Travertine Salon)| `photo-1512918728675-ed5a9ecdebfd` (Upper Sky Deck) | `photo-1600585154340-be6161a56a0c` (Champagne Kitchen)|
+All property imagery corresponds to the 8 curated flagship residences in Dubai and New York:
+
+| Residence ID | Property Name | City / Typology | Hero Image Path | Source / Resolution |
+|:---|:---|:---|:---|:---|
+| `the-lumina-waterfront-dubai` | The Lumina Waterfront | Dubai (Dubai Marina) • Penthouse | `/media/v2/posters/dubai-marina-aerial.webp` | 1920 × 1080 WebP |
+| `the-marina-horizon-dubai` | The Marina Horizon | Dubai (Yacht Club) • Waterfront Estate | `/media/v2/posters/dubai-yachts-skyline.webp` | 1920 × 1080 WebP |
+| `the-oasis-pavilion-dubai` | The Oasis Pavilion | Dubai (The Oasis) • Lagoon Villa | `/media/residences/aurelia-hero.jpg` | 1920 × 1280 JPEG |
+| `the-palace-crest-dubai` | Palace Crest Residences | Dubai (Beachfront) • Sky Villa | `/media/v2/posters/dubai-sunset-marina.webp` | 1920 × 1080 WebP |
+| `the-bayside-sanctuary-dubai` | The Bayside Sanctuary | Dubai (Harbour Point) • Coastal Duplex | `/media/v2/posters/dubai-night-skyscrapers.webp` | 1920 × 1080 WebP |
+| `the-crown-at-billionaires-row` | The Crown at Billionaires' Row | New York (57th St) • Triplex Penthouse | `/media/v2/posters/manhattan-midtown-aerial.webp` | 1920 × 1080 WebP |
+| `the-hudson-skyline-manor` | Hudson Skyline Manor | New York (Chelsea) • Sky Mansion | `/media/v2/posters/manhattan-sunset-skyline.webp` | 1920 × 1080 WebP |
+| `the-tribeca-cast-iron-loft` | Tribeca Cast-Iron Loft | New York (Tribeca) • Historic Penthouse | `/media/v2/posters/manhattan-night-architecture.webp` | 1920 × 1080 WebP |
+
+---
+
+## 3. Discarded & Rejected Assets Log
+
+| Asset ID | Discarded Candidate | Reason for Rejection | Replacement |
+|:---|:---|:---|:---|
+| `DXB-05` | Pexels #34593442 | 9:16 vertical smartphone reel of sofa with handheld wobble. Unusable for 16:9 desktop background. | Replaced by `DXB-05-ALT` (Pexels #38675643, 4K landscape interior). |
+| `NY-01` | Pexels #31398068 | Misleading title. Video depicts woman hiking on mountain trail at sunset. Zero architecture. | Replaced by `NY-01-ALT` (Pexels #7066748, Hudson River sunset aerial). |
+| `NY-03` | Pexels #31468432 | Misleading title. Video depicts frozen arctic lake with snow drifts. Irrelevant to NYC. | Replaced by `NY-03-ALT` (Pexels #14869911, Midtown dusk skyline). |
+| `NY-04` | Pexels #12197797 | Foreground features industrial scrap yard, excavators, and chain-link fences. Incompatible with luxury. | Replaced by `NY-04-ALT` (Pexels #5827633, Manhattan Midtown aerial). |
