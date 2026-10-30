@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"dub-01","slug":"the-lumina-waterfront-dubai","name":"The Lumina Waterfront","tagline":"Cantilevered Sky Terraces Above the Marina","city":"Dubai","country":"United Arab Emirates","location":"Dubai Marina","propertyType":"Penthouse","price":28500000,"formattedPrice":"$$28,500,000","bedrooms":5,"bathrooms":6,"area":8200,"areaUnit":"sq ft","completionYear":2026,"architect":"Foster & Partners Studio Collaboration","shortDescription":"A monumental triplex penthouse suspended over the Dubai Marina waterway, uniting travertine stone and cantilevered glass with unbroken maritime panoramas.","description":["The Lumina Waterfront crowns the uppermost levels of an iconic glass tower on Dubai Marina's premier canal promenade. Conceived as a floating pavilion of light and water, this residence commands unobstructed views spanning the entire marina basin to the Arabian Gulf.","Spanning 8,200 square feet across three interconnected levels, the interior architecture is characterized by double-height living galleries, book-matched Italian marble, and bespoke bronze architectural screening.","An extraordinary 20-meter cantilevered infinity edge pool extends into the sky, paired with a private yacht mooring, an acoustically tuned screening suite, and a climate-controlled four-vehicle gallery."],"amenities":["20m Cantilevered Sky Infinity Pool","Private Deep-Water Superyacht Mooring","Direct Private Keycard Elevator Access","Subterranean Temperature-Zoned Wine Cellar","Private Wellness Suite with Cold Plunge & Steam","Acoustically Isolated 12-Seat Cinema","Secured 4-Bay Executive Automotive Gallery","Circadian Architectural Lighting Automation"],"specifications":[{"label":"Internal Living Area","value":"8,200 sq ft (762 sq m)"},{"label":"Sky Terrace Area","value":"3,100 sq ft (288 sq m)"},{"label":"Ceiling Heights","value":"4.2m – 6.8m Double Height"},{"label":"Automotive Storage","value":"4 Dedicated Private Bays"},{"label":"Yacht Mooring","value":"Private 40-Meter Berth"},{"label":"Structural Engineering","value":"Post-Tensioned Architectural Concrete"}],"heroMedia":{"type":"video","src":"/media/v2/dubai/dubai-marina-aerial.mp4","poster":"/media/v2/posters/dubai-marina-aerial.webp","caption":"Aerial perspectives across Dubai Marina waterways and residential towers"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=2000&q=85","caption":"Great Room panoramic glazing with views over the marina basin","aspectRatio":"wide"},{"url":"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85","caption":"Master Bedroom suite opening onto private eastern morning terrace","aspectRatio":"wide"},{"url":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85","caption":"Minimalist chef kitchen finished in dark fumed oak and quartzite","aspectRatio":"square"}],"isFeatured":true}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"the-lumina-waterfront-dubai","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"The Lumina Waterfront | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Cantilevered Sky Terraces Above the Marina. Located in Dubai Marina, Dubai."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"

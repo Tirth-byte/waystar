@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"dub-03","slug":"the-oasis-pavilion-dubai","name":"The Oasis Modernist Pavilion","tagline":"Private Courtyard Sanctuary & Reflecting Water Gardens","city":"Dubai","country":"United Arab Emirates","location":"Dubai Hills Estate","propertyType":"Villa","price":34000000,"formattedPrice":"$$34,000,000","bedrooms":6,"bathrooms":8,"area":12400,"areaUnit":"sq ft","completionYear":2026,"architect":"Kengo Kuma & Associates","shortDescription":"A serene architectural compound constructed from warm sandstone and charred cedar, woven around reflective water courtyards and private parkland.","description":["The Oasis Modernist Pavilion is conceived as an architectural oasis of quiet contemplation. Monolithic sandstone walls shield internal living spaces from urban energy, while wide glass pocket doors slide open to reveal tranquil reflecting ponds.","Materials celebrate natural earth tones: hand-chiselled local stone, Japanese cedar louvers, and honed limestone floors that stay cool under the desert sun.","The residence includes a standalone guest pavilion, an outdoor Japanese tea house, and an Olympic-length private swimming court surrounded by native desert flora."],"amenities":["25m Olympic Lap Pool & Reflection Basins","Standalone 2-Bedroom Guest Villa","Traditional Cedar Tea Pavilion & Zen Garden","Underground Temperature-Controlled Vault","Private Yoga Court & Meditation Loggia","Automated Solar Shading Pergolas","Full Smart-Home Circadian Environment","Private Gated Estate Perimeter"],"specifications":[{"label":"Internal Living Area","value":"12,400 sq ft (1,152 sq m)"},{"label":"Private Grounds","value":"28,000 sq ft (2,600 sq m)"},{"label":"Primary Suite Area","value":"2,200 sq ft with Dual Dressing Rooms"},{"label":"Automotive Court","value":"Covered 5-Car Pavilion"},{"label":"Energy Efficiency","value":"LEED Platinum Certified Geothermal"}],"heroMedia":{"type":"video","src":"/media/v2/dubai/dubai-sunset-marina.mp4","poster":"/media/v2/posters/dubai-sunset-marina.webp","caption":"Waterfront architectural promenade at golden hour"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85","caption":"Geometric sandstone facade reflecting into the serene central pool","aspectRatio":"wide"},{"url":"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85","caption":"Minimalist living volume opening directly into the bamboo court","aspectRatio":"wide"}],"isFeatured":false}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"the-oasis-pavilion-dubai","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"The Oasis Modernist Pavilion | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Private Courtyard Sanctuary & Reflecting Water Gardens. Located in Dubai Hills Estate, Dubai."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"

@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"ny-01","slug":"the-madison-penthouse-new-york","name":"The Madison Penthouse","tagline":"Crown Triplex Overlooking Central Park Horizon","city":"New York","country":"United States","location":"Upper East Side, Manhattan","propertyType":"Penthouse","price":54000000,"formattedPrice":"$$54,000,000","bedrooms":5,"bathrooms":6,"area":9600,"areaUnit":"sq ft","completionYear":2025,"architect":"Robert A.M. Stern Architects","shortDescription":"A monumental triplex penthouse towering over Madison Avenue and Central Park, featuring classic Indiana limestone terraces and soaring 14-foot coffered ceilings.","description":["Occupying the top three floors of a newly erected limestone tower on the Upper East Side, The Madison Penthouse unites Gilded Age proportion with cutting-edge 21st-century residential engineering.","The great hall spans 48 feet overlooking the full expanse of Central Park, flanked by a formal library with a wood-burning marble fireplace and a private gallery for contemporary art.","A sculptural cantilevered bronze staircase connects to the private terrace level, featuring a heated outdoor dip pool, summer culinary loggia, and 360-degree skyline views."],"amenities":["Heated Rooftop Dip Pool & Central Park Terrace","Direct Private Key Elevator to All Three Floors","Two Working Wood-Burning Carved Marble Fireplaces","Temperature-Controlled 1,200-Bottle Wine Room","Primary Suite with Dual Spa Bathrooms & Dressing Rooms","Integrated Crestron Home Automation & Motorized Shading","White-Glove Doorman and Concierge Stewardship","Dedicated Private Storage Vault & Wine Locker"],"specifications":[{"label":"Internal Living Area","value":"9,600 sq ft (892 sq m)"},{"label":"Private Terraces","value":"2,400 sq ft (223 sq m)"},{"label":"Ceiling Clearances","value":"4.2m (14 Feet) Finished"},{"label":"Fireplaces","value":"2 Wood-Burning, 1 Ventless Gas"},{"label":"Acoustic Rating","value":"STC 65 Triple-Pane Architectural Glass"}],"heroMedia":{"type":"video","src":"/media/v2/new-york/manhattan-midtown-aerial.mp4","poster":"/media/v2/posters/manhattan-midtown-aerial.webp","caption":"Midtown Manhattan architectural aerial showcasing classic and modern high-rises"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=2000&q=85","caption":"Great Hall with custom plaster mouldings and direct Central Park views","aspectRatio":"wide"},{"url":"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85","caption":"Formal dining gallery framed by custom fumed oak panelling","aspectRatio":"wide"}],"isFeatured":true}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"the-madison-penthouse-new-york","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"The Madison Penthouse | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Crown Triplex Overlooking Central Park Horizon. Located in Upper East Side, Manhattan, New York."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"

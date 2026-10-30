@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"ny-02","slug":"hudson-tower-sky-residence-new-york","name":"Hudson Tower Sky Residence","tagline":"Cantilevered Glass Architecture Over the Hudson River","city":"New York","country":"United States","location":"Hudson Yards, Manhattan","propertyType":"Sky Residence","price":32000000,"formattedPrice":"$$32,000,000","bedrooms":4,"bathrooms":5,"area":7400,"areaUnit":"sq ft","completionYear":2026,"architect":"Diller Scofidio + Renfro Collaboration","shortDescription":"A visionary glass-enclosed sky residence cantilevering dramatically over the Hudson River, framing sunsets behind unobstructed floor-to-ceiling curtain walls.","description":["Suspended 65 floors above Hudson Yards, this residence represents the avant-garde of Manhattan glass tower architecture. The interior is anchored by an open-concept great room with 12-foot floor-to-ceiling low-iron insulated glass.","The custom Poliform kitchen features stone monolithic islands and Gaggenau 400 series appliances, opening to an intimate western sunset dining loggia.","The corner master suite features a freestanding soaking tub positioned directly against the glass wall overlooking the illuminated river traffic below."],"amenities":["Floor-to-Ceiling Low-Iron Acoustic Curtain Wall","Private Corner Sunset Loggia Over Hudson River","Primary Suite with Dual Marble Dressing Suites","Private Soundproof Executive Screening Room","Private Porte-Cochere with Automated Valet","Access to Tower Wellness Club & Sky Lounge","Dedicated Private Resident Elevator","Custom Italian Millwork by Poliform"],"specifications":[{"label":"Internal Floor Area","value":"7,400 sq ft (687 sq m)"},{"label":"Exterior Loggia","value":"850 sq ft (79 sq m)"},{"label":"Elevation","value":"65th Floor (235 meters elevation)"},{"label":"Ceiling Clearances","value":"3.7m (12 Feet) Clear"},{"label":"Glazing","value":"Acoustic Triple-Glazed Low-E Structural Glass"}],"heroMedia":{"type":"video","src":"/media/v2/new-york/manhattan-sunset-skyline.mp4","poster":"/media/v2/posters/manhattan-sunset-skyline.webp","caption":"Hudson River aerial overlooking Manhattan skyline at sunset"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85","caption":"Corner living salon looking west toward sunset over the river","aspectRatio":"wide"}],"isFeatured":true}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"hudson-tower-sky-residence-new-york","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Hudson Tower Sky Residence | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Cantilevered Glass Architecture Over the Hudson River. Located in Hudson Yards, Manhattan, New York."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"

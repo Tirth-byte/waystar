@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"ny-04","slug":"the-tribeca-atelier-new-york","name":"The Tribeca Atelier Loft","tagline":"Cast-Iron Heritage with 22-Foot Double-Height Ceilings","city":"New York","country":"United States","location":"Tribeca, Manhattan","propertyType":"Loft","price":22800000,"formattedPrice":"$$22,800,000","bedrooms":4,"bathrooms":4,"area":6800,"areaUnit":"sq ft","completionYear":2026,"architect":"Annabelle Selldorf Architects","shortDescription":"A monumental historic cast-iron duplex loft in landmarked Tribeca, celebrating soaring double-height volumes, exposed structural columns, and museum-grade finishes.","description":["The Tribeca Atelier is an extraordinary celebration of industrial architectural heritage elevated to residential art. Situated in an 1890s cast-iron building, original fluted Corinthian columns support 22-foot ceilings in the main gallery.","The spatial design incorporates custom hot-rolled steel architectural staircases, radiant terrazzo flooring, and floor-to-ceiling operable casement windows.","The upper level contains an intimate primary retreat, custom dressing galleries, and a private landscaped rooftop loggia."],"amenities":["22-Foot Soaring Double-Height Gallery Volumes","Restored Historic Fluted Cast-Iron Columns","Private Landscaped Rooftop Terrace Loggia","Direct Keyed Elevator Entry into Residence","Custom Boffi Kitchen with Integrated Pietra d'Avola Stone","Acoustically Isolated Audio Recording & Screening Studio","Private Climate-Controlled Wine Room","Doorman Building with Private Concierge"],"specifications":[{"label":"Internal Living Area","value":"6,800 sq ft (632 sq m)"},{"label":"Rooftop Loggia","value":"1,100 sq ft (102 sq m)"},{"label":"Ceiling Clearances","value":"6.7m (22 Feet) Double Height"},{"label":"Windows","value":"Custom Architectural Steel Casement"},{"label":"Heating & Cooling","value":"Silent Multi-Zone Radiant System"}],"heroMedia":{"type":"video","src":"/media/v2/interiors/modern-luxury-interior.mp4","poster":"/media/v2/posters/modern-luxury-interior.webp","caption":"Double-height architectural interior with timber screen and natural clerestory light"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85","caption":"Main double-height entertaining gallery showing fluted iron columns","aspectRatio":"wide"}],"isFeatured":false}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"the-tribeca-atelier-new-york","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"The Tribeca Atelier Loft | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Cast-Iron Heritage with 22-Foot Double-Height Ceilings. Located in Tribeca, Manhattan, New York."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"

@@ -1,0 +1,30 @@
+2:"$Sreact.fragment"
+3:"/waystar/_next/static/chunks/0umf92h1sb77c.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+c:"/waystar/_next/static/chunks/17u81ptz4vlyl.js"
+d:"/waystar/_next/static/chunks/0m3myxniffw14.js"
+e:I[89825,["$3","$c","$d"],"default"]
+f:I[97367,["$3"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$3"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$3"],"$15"]
+17:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+b:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[["$","$Le",null,{"residence":{"id":"ny-03","slug":"740-park-avenue-heritage-new-york","name":"740 Park Avenue Heritage Residence","tagline":"Historic Limestone Grandeur & Private Garden Courtyard","city":"New York","country":"United States","location":"Park Avenue, Manhattan","propertyType":"Townhouse","price":46500000,"formattedPrice":"$$46,500,000","bedrooms":6,"bathrooms":7,"area":11200,"areaUnit":"sq ft","completionYear":2025,"architect":"Rosario Candela / Modern Heritage Restoration","shortDescription":"A grand 25-foot wide limestone townhouse residence on Park Avenue, pairing preserved 1920s classic architecture with a serene private garden atrium.","description":["A distinguished property offering the privacy of a single-family townhouse with the prestige of a Park Avenue address. Meticulously restored to museum standards, the home features six levels served by a private mahogany elevator.","The parlour floor boasts 13-foot ceilings, herringbone parquet de Versailles flooring, and twin carved French limestone fireplaces.","The private landscaped rear garden was conceived by a master landscape architect, featuring mature birch trees, stone water walls, and bluestone entertaining terraces."],"amenities":["Landscaped English Garden Court & Water Walls","Private High-Speed Mahogany Passenger Elevator","Full Subterranean Wine Tasting Room & Cellar","Gym & Private Steam Room Suite","Separate Staff Accommodation & Service Entrance","Secured Street-Level Automotive Garage","Triple-Tier Comprehensive Security Infrastructure","Radiant Heated Limestone Floors Throughout"],"specifications":[{"label":"Internal Living Area","value":"11,200 sq ft (1,040 sq m)"},{"label":"Garden & Terraces","value":"2,200 sq ft (204 sq m)"},{"label":"Building Width","value":"25 Feet Wide"},{"label":"Total Levels","value":"6 Finished Stories plus Cellar"},{"label":"Automotive Storage","value":"1 Private Attached Heated Bay"}],"heroMedia":{"type":"video","src":"/media/v2/new-york/manhattan-night-skyline.mp4","poster":"/media/v2/posters/manhattan-night-skyline.webp","caption":"Illuminated nighttime Manhattan skyline along the East River"},"galleryImages":[{"url":"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85","caption":"Historic parlour floor reception room with restored plaster rosettes","aspectRatio":"wide"}],"isFeatured":false}}],[["$","script","script-0",{"src":"/waystar/_next/static/chunks/17u81ptz4vlyl.js","async":true}],["$","script","script-1",{"src":"/waystar/_next/static/chunks/0m3myxniffw14.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$8"}}]]
+9:[["children",{"s":{"n":"slug","t":"d","k":"740-park-avenue-heritage-new-york","s":[]},"h":96,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@a","v":"$7","s":"$8"},"c":"$Qb"}]]
+1:[["children",{"s":"residences","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0B0D0C"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"740 Park Avenue Heritage Residence | WAYSTAR Exceptional Residences"}],["$","meta","1",{"name":"description","content":"Historic Limestone Grandeur & Private Garden Courtyard. Located in Park Avenue, Manhattan, New York."}],["$","meta","2",{"name":"keywords","content":"WAYSTAR,Luxury Real Estate,Dubai Marina,Manhattan Penthouses,New York Real Estate,Dubai Ultra Luxury,Architectural Residences"}],["$","link","3",{"rel":"icon","href":"/waystar/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L17","4",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$8"}},"a":"$@19","u":"$@1a","b":"R1St9bncxhxDObwLPuzdv"}
+11:null
+1a:true
+8:300
+8:C
+19:0
+a:"$undefined"
+6:"$undefined"
+18:"$undefined"
+12:"$undefined"
