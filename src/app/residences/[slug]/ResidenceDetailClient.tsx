@@ -20,6 +20,7 @@ import BackgroundVideo from "@/components/cinematic/BackgroundVideo";
 import ViewingRequestForm from "@/components/forms/ViewingRequestForm";
 import { Residence } from "@/types/residence";
 import { useSavedResidences } from "@/hooks/useSavedResidences";
+import { getAssetPath } from "@/lib/paths";
 
 interface ResidenceDetailClientProps {
   residence: Residence;
@@ -54,7 +55,7 @@ export default function ResidenceDetailClient({ residence }: ResidenceDetailClie
           ) : (
             <div className="absolute inset-0">
               <Image
-                src={residence.heroMedia.poster}
+                src={getAssetPath(residence.heroMedia.poster)}
                 alt={residence.name}
                 fill
                 priority
@@ -231,7 +232,7 @@ export default function ResidenceDetailClient({ residence }: ResidenceDetailClie
                       <div key={idx} className="space-y-2">
                         <div className="relative aspect-video bg-black border border-white/10 overflow-hidden">
                           <Image
-                            src={img.url}
+                            src={getAssetPath(img.url)}
                             alt={img.caption}
                             fill
                             sizes="(max-width: 1024px) 100vw, 65vw"

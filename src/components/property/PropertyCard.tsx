@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Bookmark, Bed, Bath, Maximize2, ArrowUpRight } from "lucide-react";
 import { Residence } from "@/types/residence";
 import { useSavedResidences } from "@/hooks/useSavedResidences";
+import { getAssetPath } from "@/lib/paths";
 
 interface PropertyCardProps {
   residence: Residence;
@@ -20,7 +21,7 @@ export default function PropertyCard({ residence, priority = false }: PropertyCa
       {/* Visual Canvas Stage */}
       <div className="relative aspect-[16/10] overflow-hidden bg-black">
         <Image
-          src={residence.heroMedia.poster}
+          src={getAssetPath(residence.heroMedia.poster)}
           alt={residence.name}
           fill
           priority={priority}

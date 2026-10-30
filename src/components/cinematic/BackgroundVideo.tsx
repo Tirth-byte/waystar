@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/paths";
 
 export interface BackgroundVideoProps {
   src: string;
@@ -44,6 +45,9 @@ export default function BackgroundVideo({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasError, setHasError] = useState(false);
+
+  const resolvedSrc = getAssetPath(src);
+  const resolvedPoster = getAssetPath(poster);
 
   const isReducedMotion = useSyncExternalStore(
     subscribeReducedMotion,
@@ -109,7 +113,7 @@ export default function BackgroundVideo({
         }`}
       >
         <Image
-          src={poster}
+          src={resolvedPoster}
           alt={alt}
           fill
           priority={priority}
@@ -122,7 +126,7 @@ export default function BackgroundVideo({
       {!hasError && !isReducedMotion && (
         <video
           ref={videoRef}
-          src={src}
+          src={resolvedSrc}
           autoPlay
           muted
           loop
