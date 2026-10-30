@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Bookmark, ArrowUpRight, Bed, Bath, Maximize2 } from "lucide-react";
+import { Bookmark, ArrowUpRight, Bed, Bath, Maximize2, Play } from "lucide-react";
 import { Property } from "@/types/property";
 import { useFavourites } from "@/hooks/useFavourites";
 
@@ -33,9 +33,17 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
 
         {/* Top Badges: Typology & Save Action */}
         <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-          <span className="text-[10px] tracking-[0.25em] uppercase px-3 py-1 bg-[#20211F]/85 backdrop-blur-md text-[#B9A994] border border-white/15">
-            {property.propertyType}
-          </span>
+          <div className="flex items-center space-x-2">
+            <span className="text-[10px] tracking-[0.25em] uppercase px-3 py-1 bg-[#20211F]/85 backdrop-blur-md text-[#B9A994] border border-white/15">
+              {property.propertyType}
+            </span>
+            {property.emaarVideo && (
+              <span className="hidden sm:inline-flex items-center space-x-1 text-[9px] tracking-[0.2em] uppercase px-2 py-1 bg-black/75 backdrop-blur-md text-white border border-white/10">
+                <Play className="w-2.5 h-2.5 fill-current text-[#B9A994]" />
+                <span>Film</span>
+              </span>
+            )}
+          </div>
 
           <button
             onClick={(e) => {

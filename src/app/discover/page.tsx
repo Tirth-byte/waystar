@@ -1,166 +1,237 @@
 "use client";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import PropertyCard from "@/components/ui/PropertyCard";
-import FilterToolbar from "@/components/developments/FilterToolbar";
-import { usePropertyFilter } from "@/hooks/usePropertyFilter";
-import { Compass, Sparkles, Building, Waves, Mountain, Landmark } from "lucide-react";
+import { useState, useMemo } from "react";
+import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
+import PropertyCard from "@/components/property/PropertyCard";
+import BackgroundVideo from "@/components/cinematic/BackgroundVideo";
+import { RESIDENCES } from "@/data/residences";
+import { Search, RotateCcw, SlidersHorizontal } from "lucide-react";
 
 export default function DiscoverPage() {
-  const {
-    filters,
-    filteredProperties,
-    setSearchQuery,
-    setLocation,
-    setPropertyType,
-    setPriceRange,
-    setSortBy,
-    resetFilters,
-    isFiltered,
-    matchCount,
-  } = usePropertyFilter();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCity, setSelectedCity] = useState<string>("All");
+  const [selectedType, setSelectedType] = useState<string>("All");
+  const [priceBracket, setPriceBracket] = useState<string>("All");
+  const [minBeds, setMinBeds] = useState<number>(0);
 
-  const atmosphericCategories = [
-    {
-      title: "Mediterranean & Waterfront",
-      subtitle: "Ocean horizon villas and cantilevered pools",
-      icon: Waves,
-      onClick: () => {
-        resetFilters();
-        setLocation("Monaco");
-      },
-    },
-    {
-      title: "Alpine & Mountain Solitude",
-      subtitle: "Snow-line pavilions and thermal sanctuaries",
-      icon: Mountain,
-      onClick: () => {
-        resetFilters();
-        setLocation("Aspen");
-      },
-    },
-    {
-      title: "Historic Urban Sanctuaries",
-      subtitle: "Conserved Georgian architecture and Mayfair retreats",
-      icon: Landmark,
-      onClick: () => {
-        resetFilters();
-        setLocation("London");
-      },
-    },
-    {
-      title: "Biophilic Forest Retreats",
-      subtitle: "Yakisugi timber, bamboo groves, and onsen baths",
-      icon: Building,
-      onClick: () => {
-        resetFilters();
-        setLocation("Kyoto");
-      },
-    },
-  ];
+  const filtered = useMemo(() => {
+    return RESIDENCES.filter((r) => {
+      // Search query
+      const q = searchQuery.toLowerCase().trim();
+      const matchSearch =
+        !q ||
+        r.name.toLowerCase().includes(q) ||
+        r.location.toLowerCase().includes(q) ||
+        r.city.toLowerCase().includes(q) ||
+        r.architect.toLowerCase().includes(q) ||
+        r.tagline.toLowerCase().includes(q);
+
+      // City filter
+      const matchCity = selectedCity === "All" || r.city === selectedCity;
+
+      // Type filter
+      const matchType = selectedType === "All" || r.propertyType === selectedType;
+
+      // Price bracket filter
+      let matchPrice = true;
+      if (priceBracket === "under-30m") matchPrice = r.price < 30000000;
+      else if (priceBracket === "30m-45m") matchPrice = r.price >= 30000000 && r.price <= 45000000;
+      else if (priceBracket === "above-45m") matchPrice = r.price > 45000000;
+
+      // Bedroom filter
+      const matchBeds = minBeds === 0 || r.bedrooms >= minBeds;
+
+      return matchSearch && matchCity && matchType && matchPrice && matchBeds;
+    });
+  }, [searchQuery, selectedCity, selectedType, priceBracket, minBeds]);
+
+  const handleReset = () => {
+    setSearchQuery("");
+    setSelectedCity("All");
+    setSelectedType("All");
+    setPriceBracket("All");
+    setMinBeds(0);
+  };
+
+  const isFiltered =
+    searchQuery.trim().length > 0 ||
+    selectedCity !== "All" ||
+    selectedType !== "All" ||
+    priceBracket !== "All" ||
+    minBeds > 0;
 
   return (
     <>
-      <Navbar />
+      <SiteHeader />
+      <main className="flex-1 bg-[#0B0D0C] text-[#F4F1EB]">
+        {/* Full-Bleed 50svh Discover Header */}
+        <section className="relative w-full h-[50svh] min-h-[380px] flex items-end pb-12 overflow-hidden border-b border-white/10">
+          <BackgroundVideo
+            src="/media/v2/new-york/manhattan-sunset-skyline.mp4"
+            poster="/media/v2/posters/manhattan-sunset-skyline.webp"
+            priority
+            overlay="bottom"
+          />
 
-      <main className="flex-1 bg-[#F7F6F2]">
-        {/* Discovery Hero Header with Safe Top Padding */}
-        <section className="bg-[#20211F] text-[#F7F6F2] pt-32 pb-16 sm:pb-24 border-b border-white/10 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 space-y-4">
-            <div className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.3em] text-[#B9A994]">
-              <Compass className="w-4 h-4" />
-              <span>Interactive Discovery Matrix</span>
-            </div>
-            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#FFFFFF] tracking-tight">
-              Curate Your Living Horizon
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full space-y-3">
+            <span className="text-[10px] uppercase tracking-[0.35em] text-[#C1AD91] font-medium block">
+              Architectural Discovery
+            </span>
+            <h1 className="font-serif text-4xl sm:text-6xl font-light text-white tracking-tight drop-shadow-md">
+              Explore by Coordinate & Scale.
             </h1>
-            <p className="text-sm sm:text-base text-[#E6DED0]/85 max-w-2xl font-light leading-relaxed">
-              Navigate our portfolio through architectural atmosphere, geography, or material typologies. Find the residence aligned with your lifestyle and architectural taste.
+            <p className="text-xs sm:text-sm text-[#A6A39E] font-light max-w-xl leading-relaxed">
+              Precision discovery interface across Dubai waterfront developments and Manhattan landmark addresses.
             </p>
           </div>
         </section>
 
-        {/* Atmosphere Curations Ribbon */}
-        <section className="py-10 bg-[#E6DED0]/50 border-b border-[#E6DED0]">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12">
-            <div className="flex items-center space-x-2 mb-6">
-              <Sparkles className="w-3.5 h-3.5 text-[#55544F]" />
-              <span className="text-[10px] uppercase tracking-[0.25em] text-[#55544F]">
-                Atmospheric Presets
-              </span>
+        {/* Discovery Filter Controls Section */}
+        <section className="bg-[#111311] border-b border-white/10 py-8 px-6 lg:px-12">
+          <div className="max-w-7xl mx-auto space-y-6">
+            {/* Search Input Bar */}
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#C1AD91]" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by residence name, architectural atelier, or neighborhood (e.g., Madison, Marina, Tribeca)..."
+                className="w-full bg-[#0B0D0C] border border-white/15 pl-11 pr-4 py-3.5 text-xs text-white placeholder-[#A6A39E]/60 focus:outline-none focus:border-[#C1AD91] transition-colors"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-wider text-[#A6A39E] hover:text-white"
+                >
+                  Clear
+                </button>
+              )}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {atmosphericCategories.map((item, idx) => {
-                const Icon = item.icon;
-                return (
-                  <button
-                    key={idx}
-                    onClick={item.onClick}
-                    className="group p-5 bg-white border border-[#E6DED0] hover:border-[#20211F] hover:bg-[#20211F] hover:text-[#F7F6F2] transition-all text-left flex flex-col justify-between shadow-sm"
-                  >
-                    <Icon className="w-5 h-5 text-[#B9A994] mb-3 transition-colors group-hover:text-[#B9A994]" />
-                    <div>
-                      <h4 className="font-serif text-base font-normal group-hover:text-[#F7F6F2] text-[#20211F]">
-                        {item.title}
-                      </h4>
-                      <p className="text-[11px] text-[#55544F] group-hover:text-[#E6DED0]/70 mt-1 font-light">
-                        {item.subtitle}
-                      </p>
-                    </div>
-                  </button>
-                );
-              })}
+            {/* Filter Facets Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+              {/* City Selection */}
+              <div className="space-y-1.5">
+                <label className="text-[10px] uppercase tracking-[0.2em] text-[#C1AD91]">
+                  Destination
+                </label>
+                <select
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                  className="w-full bg-[#0B0D0C] border border-white/15 px-3 py-2.5 text-white uppercase tracking-wider focus:outline-none focus:border-[#C1AD91]"
+                >
+                  <option value="All">All Destinations</option>
+                  <option value="Dubai">Dubai, UAE</option>
+                  <option value="New York">New York, USA</option>
+                </select>
+              </div>
+
+              {/* Typology Selection */}
+              <div className="space-y-1.5">
+                <label className="text-[10px] uppercase tracking-[0.2em] text-[#C1AD91]">
+                  Typology
+                </label>
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full bg-[#0B0D0C] border border-white/15 px-3 py-2.5 text-white uppercase tracking-wider focus:outline-none focus:border-[#C1AD91]"
+                >
+                  <option value="All">All Typologies</option>
+                  <option value="Penthouse">Penthouse</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Waterfront Estate">Waterfront Estate</option>
+                  <option value="Sky Residence">Sky Residence</option>
+                  <option value="Townhouse">Townhouse</option>
+                  <option value="Loft">Loft</option>
+                </select>
+              </div>
+
+              {/* Valuation Bracket */}
+              <div className="space-y-1.5">
+                <label className="text-[10px] uppercase tracking-[0.2em] text-[#C1AD91]">
+                  Valuation Range
+                </label>
+                <select
+                  value={priceBracket}
+                  onChange={(e) => setPriceBracket(e.target.value)}
+                  className="w-full bg-[#0B0D0C] border border-white/15 px-3 py-2.5 text-white uppercase tracking-wider focus:outline-none focus:border-[#C1AD91]"
+                >
+                  <option value="All">All Valuations</option>
+                  <option value="under-30m">Under $30,000,000</option>
+                  <option value="30m-45m">$30,000,000 – $45,000,000</option>
+                  <option value="above-45m">Above $45,000,000</option>
+                </select>
+              </div>
+
+              {/* Bedrooms Minimum */}
+              <div className="space-y-1.5">
+                <label className="text-[10px] uppercase tracking-[0.2em] text-[#C1AD91]">
+                  Bedrooms
+                </label>
+                <select
+                  value={minBeds}
+                  onChange={(e) => setMinBeds(Number(e.target.value))}
+                  className="w-full bg-[#0B0D0C] border border-white/15 px-3 py-2.5 text-white uppercase tracking-wider focus:outline-none focus:border-[#C1AD91]"
+                >
+                  <option value={0}>Any Bedroom Count</option>
+                  <option value={4}>4+ Bedrooms</option>
+                  <option value={5}>5+ Bedrooms</option>
+                  <option value={6}>6+ Bedrooms</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Filter Summary & Reset Bar */}
+            <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs">
+              <div className="flex items-center space-x-2 text-[#A6A39E]">
+                <SlidersHorizontal className="w-3.5 h-3.5 text-[#C1AD91]" />
+                <span>
+                  Found <strong className="text-white">{filtered.length}</strong> matching residences
+                </span>
+              </div>
+
+              {isFiltered && (
+                <button
+                  type="button"
+                  onClick={handleReset}
+                  className="flex items-center space-x-1.5 text-[#C1AD91] hover:text-white transition-colors uppercase text-[10px] tracking-widest"
+                >
+                  <RotateCcw className="w-3 h-3" />
+                  <span>Reset All Filters</span>
+                </button>
+              )}
             </div>
           </div>
         </section>
 
-        {/* Discovery Filter and Results Section */}
-        <section className="py-12 sm:py-20 max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
-          <FilterToolbar
-            filters={filters}
-            onSearchChange={setSearchQuery}
-            onLocationChange={setLocation}
-            onTypeChange={setPropertyType}
-            onPriceChange={setPriceRange}
-            onSortChange={setSortBy}
-            onReset={resetFilters}
-            isFiltered={isFiltered}
-            matchCount={matchCount}
-          />
-
-          {/* Results Grid */}
-          {filteredProperties.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-              {filteredProperties.map((property, idx) => (
-                <PropertyCard
-                  key={property.id}
-                  property={property}
-                  priority={idx < 3}
-                />
+        {/* Results Grid */}
+        <section className="max-w-7xl mx-auto px-6 lg:px-12 py-12 sm:py-16">
+          {filtered.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filtered.map((residence) => (
+                <PropertyCard key={residence.id} residence={residence} />
               ))}
             </div>
           ) : (
-            <div className="bg-[#20211F] text-[#F7F6F2] border border-white/10 p-12 sm:p-20 text-center space-y-6 max-w-2xl mx-auto shadow-2xl">
-              <h3 className="font-serif text-2xl sm:text-3xl font-light">
-                No Residences Match This Discovery Criteria
-              </h3>
-              <p className="text-xs sm:text-sm text-[#E6DED0]/70 leading-relaxed font-light">
-                Try selecting &ldquo;All Locations&rdquo; or clearing your keywords.
+            <div className="py-20 text-center space-y-4 border border-white/10 bg-[#111311] p-10">
+              <h3 className="font-serif text-2xl text-white">No residences match your search.</h3>
+              <p className="text-xs text-[#A6A39E]">
+                Try broadening your criteria or reset the filters to browse our complete collection.
               </p>
               <button
-                onClick={resetFilters}
-                className="bg-[#B9A994] text-[#20211F] text-xs uppercase tracking-[0.2em] px-6 py-3 font-medium hover:bg-white transition-colors"
+                onClick={handleReset}
+                className="inline-flex items-center space-x-2 text-xs uppercase tracking-[0.2em] px-6 py-3 bg-[#C1AD91] text-[#0B0D0C] font-semibold"
               >
-                Reset Discovery Filters
+                <span>Reset Filters</span>
               </button>
             </div>
           )}
         </section>
       </main>
-
-      <Footer />
+      <SiteFooter />
     </>
   );
 }

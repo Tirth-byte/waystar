@@ -1,19 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
+import BackgroundVideo from "@/components/cinematic/BackgroundVideo";
 import { initGSAP, prefersReducedMotion } from "@/lib/animations";
 
 export default function HeroScene() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const brandRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   useEffect(() => {
     const { gsap } = initGSAP();
@@ -23,24 +21,30 @@ export default function HeroScene() {
     }
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+      const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
       tl.fromTo(
-        headlineRef.current,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, duration: 1.4, delay: 0.3 }
+        brandRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6 }
       )
         .fromTo(
+          headlineRef.current,
+          { opacity: 0, y: 25 },
+          { opacity: 1, y: 0, duration: 0.7 },
+          "-=0.3"
+        )
+        .fromTo(
           subtitleRef.current,
-          { opacity: 0, y: 30 },
-          { opacity: 1, y: 0, duration: 1.1 },
-          "-=0.8"
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "-=0.3"
         )
         .fromTo(
           ctaRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.9 },
-          "-=0.7"
+          { opacity: 0, y: 15 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "-=0.3"
         );
     }, containerRef);
 
@@ -50,104 +54,74 @@ export default function HeroScene() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full h-screen min-h-[700px] flex items-end pb-16 sm:pb-24 overflow-hidden bg-[#121312]"
+      className="relative w-full h-[100svh] min-h-[640px] flex items-end pb-16 sm:pb-20 overflow-hidden bg-[#0B0D0C]"
     >
-      {/* Edge-to-Edge Cinematic Video Layer */}
-      <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          onCanPlay={() => setVideoLoaded(true)}
-          className={`w-full h-full object-cover object-center transition-opacity duration-1000 ${
-            videoLoaded ? "opacity-90" : "opacity-0"
-          }`}
-        >
-          <source src="/media/videos/hero-villa.mp4" type="video/mp4" />
-        </video>
+      {/* Scene 01 Full-Bleed 4K Video: Dubai Marina Aerial Sweep */}
+      <BackgroundVideo
+        src="/media/v2/dubai/dubai-marina-aerial.mp4"
+        poster="/media/v2/posters/dubai-marina-aerial.webp"
+        priority
+        overlay="subtle"
+      />
 
-        {/* Local Poster Preload / Fallback Frame */}
-        <div
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            videoLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
-        >
-          <Image
-            src="/media/posters/hero-villa-poster.jpg"
-            alt="WAYSTAR Luxury Architectural Residence"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-        </div>
-
-        {/* Cinematic Multi-Layer Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#121312] via-[#121312]/30 to-black/60 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/25 mix-blend-multiply pointer-events-none" />
-        <div className="absolute inset-0 grain-overlay opacity-30 pointer-events-none" />
-      </div>
-
-      {/* Hero Foreground Content */}
+      {/* Foreground Editorial Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-        <div className="max-w-4xl space-y-6 sm:space-y-8">
-          <div className="inline-flex items-center space-x-3 text-xs uppercase tracking-[0.35em] text-[#B9A994]">
-            <span className="w-8 h-[1px] bg-[#B9A994]" />
-            <span>Curated International Flagship</span>
+        <div className="max-w-3xl space-y-5 sm:space-y-6">
+          {/* Brand Eyebrow */}
+          <div ref={brandRef} className="space-y-1">
+            <span className="font-serif tracking-[0.3em] text-xs sm:text-sm uppercase text-[#F4F1EB] block">
+              WAYSTAR
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-[#C1AD91] font-medium block">
+              EXCEPTIONAL RESIDENCES
+            </span>
           </div>
 
+          {/* Monumental Serif Headline */}
           <h1
             ref={headlineRef}
-            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-[#FFFFFF] leading-[1.04] tracking-tight drop-shadow-md"
+            className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white leading-[1.05] tracking-tight drop-shadow-2xl"
           >
-            Some places are built. <br />
-            <span className="italic font-normal text-[#E6DED0]">
-              Others are imagined beyond limits.
-            </span>
+            Beyond the ordinary.
           </h1>
 
+          {/* Restrained Subtitle */}
           <p
             ref={subtitleRef}
-            className="text-sm sm:text-base md:text-lg text-[#E6DED0]/90 max-w-2xl font-light leading-relaxed tracking-wide drop-shadow-sm"
+            className="text-sm sm:text-base md:text-lg text-[#F4F1EB]/90 max-w-xl font-light leading-relaxed drop-shadow"
           >
-            WAYSTAR conceives architecturally singular residences crafted in communion with the world&apos;s most revered landscapes. Monumental form, elemental materials, and enduring grace.
+            Singular residential architecture conceived in dialogue with the world&apos;s most revered skylines and water horizons.
           </p>
 
-          {/* Action Row */}
+          {/* Dual Action CTAs */}
           <div
             ref={ctaRef}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-5 pt-3"
           >
             <Link
-              href="/developments"
-              className="group inline-flex items-center justify-center space-x-3 bg-[#F7F6F2] hover:bg-[#B9A994] text-[#20211F] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 font-semibold shadow-lg"
+              href="/residences"
+              className="group inline-flex items-center justify-center space-x-2.5 bg-[#F4F1EB] hover:bg-[#C1AD91] text-[#0B0D0C] text-xs uppercase tracking-[0.22em] px-8 py-3.5 sm:py-4 transition-all duration-300 font-semibold shadow-2xl"
             >
               <span>Explore Residences</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
 
             <Link
-              href="/about"
-              className="inline-flex items-center justify-center space-x-2 border border-white/30 hover:border-[#B9A994] text-[#FFFFFF] hover:text-[#B9A994] text-xs uppercase tracking-[0.25em] px-8 py-4 transition-all duration-300 bg-black/25 backdrop-blur-sm"
+              href="/discover"
+              className="inline-flex items-center justify-center space-x-2 border border-white/30 hover:border-white text-white text-xs uppercase tracking-[0.22em] px-8 py-3.5 sm:py-4 transition-all duration-300 bg-black/35 backdrop-blur-sm"
             >
-              <span>Our Philosophy</span>
+              <span>Discover WAYSTAR</span>
             </Link>
           </div>
         </div>
 
-        {/* Scroll Discovery Indicator */}
-        <div className="absolute right-6 lg:right-12 bottom-6 sm:bottom-12 hidden md:flex flex-col items-center space-y-3">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-[#B9A994] [writing-mode:vertical-lr] rotate-180">
-            Scroll To Discover
-          </span>
-          <div className="w-[1px] h-12 bg-white/20 relative overflow-hidden">
-            <div className="w-full h-1/2 bg-[#B9A994] animate-bounce" />
-          </div>
-          <ArrowDown className="w-3.5 h-3.5 text-[#B9A994]" />
+        {/* Scroll Indicator */}
+        <div className="hidden md:flex absolute bottom-5 left-1/2 -translate-x-1/2 flex-col items-center space-y-1.5 text-[#F4F1EB]/60 pointer-events-none">
+          <span className="text-[9px] uppercase tracking-[0.3em]">Scroll</span>
+          <ChevronDown className="w-4 h-4 animate-bounce text-[#C1AD91]" />
         </div>
       </div>
     </section>
   );
 }
+

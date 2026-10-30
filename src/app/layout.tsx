@@ -5,7 +5,7 @@ import "./globals.css";
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -19,29 +19,28 @@ const plusJakarta = Plus_Jakarta_Sans({
 const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#20211F",
+  themeColor: "#0B0D0C",
   width: "device-width",
   initialScale: 1,
 };
 
 export const metadata: Metadata = {
-  title: "WAYSTAR — Exceptional Residences | Luxury Real Estate Flagship",
+  title: "WAYSTAR — Exceptional Residences | Dubai & New York",
   description:
-    "An international luxury real estate development flagship. Discover world-class residences curated for discerning collectors of architecture.",
+    "An ultra-luxury architectural real estate flagship. Exceptional residential architecture in Dubai and New York City.",
   keywords: [
     "WAYSTAR",
     "Luxury Real Estate",
+    "Dubai Marina",
+    "Manhattan Penthouses",
+    "New York Real Estate",
+    "Dubai Ultra Luxury",
     "Architectural Residences",
-    "Penthouse",
-    "Monaco",
-    "Lake Como",
-    "London",
-    "Kyoto",
   ],
 };
 
@@ -53,9 +52,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${plusJakarta.variable} ${cinzel.variable} scroll-smooth antialiased selection:bg-[#B9A994] selection:text-[#20211F]`}
+      className={`${cormorant.variable} ${plusJakarta.variable} ${cinzel.variable} scroll-smooth antialiased selection:bg-[#C1AD91] selection:text-[#0B0D0C]`}
     >
-      <body className="min-h-screen bg-[#F7F6F2] text-[#20211F] font-sans overflow-x-hidden flex flex-col">
+      <body className="min-h-screen bg-[#0B0D0C] text-[#F4F1EB] font-sans overflow-x-hidden flex flex-col">
         {children}
       </body>
     </html>

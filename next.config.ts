@@ -24,12 +24,47 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/waystar",
+        source: "/developments",
+        destination: "/residences",
+        permanent: true,
+      },
+      {
+        source: "/developments/:slug*",
+        destination: "/residences/:slug*",
+        permanent: true,
+      },
+      {
+        source: "/about",
+        destination: "/philosophy",
+        permanent: true,
+      },
+      {
+        source: "/portfolio",
+        destination: "/residences",
+        permanent: true,
+      },
+      {
+        source: "/contact-us",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/waystar:path(.*)",
         destination: "/",
         permanent: false,
       },
       {
-        source: "/WAYSTAR",
+        source: "/WAYSTAR:path(.*)",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/%20:path(.*)",
+        destination: "/",
+        permanent: false,
+      },
+      {
+        source: "/ :path(.*)",
         destination: "/",
         permanent: false,
       },

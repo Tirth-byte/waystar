@@ -53,8 +53,13 @@ export const PROPERTIES: Property[] = [
       { label: "Structural Framing", value: "Post-Tensioned Architectural Concrete" }
     ],
     heroImage: "/media/residences/aurelia-hero.jpg",
-    posterImage: "/media/posters/hero-villa-poster.jpg",
-    videoUrl: "/media/videos/hero-villa.mp4",
+    posterImage: "/media/residences/aurelia-hero.jpg",
+    emaarVideo: {
+      id: "44oA4q_VvQ8",
+      title: "Palace Beach Residence",
+      embedUrl: "https://www.youtube-nocookie.com/embed/44oA4q_VvQ8",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85",
@@ -124,8 +129,13 @@ export const PROPERTIES: Property[] = [
       { label: "Automotive Storage", value: "2 Enclosed Timber Pavilion Bays" }
     ],
     heroImage: "/media/residences/kura-hero.jpg",
-    posterImage: "/media/posters/interior-living-poster.jpg",
-    videoUrl: "/media/videos/interior-living.mp4",
+    posterImage: "/media/emaar/posters/emaar-beachfront.webp",
+    emaarVideo: {
+      id: "Sxsiq1VaHf0",
+      title: "Emaar Beachfront",
+      embedUrl: "https://www.youtube-nocookie.com/embed/Sxsiq1VaHf0",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=2000&q=85",
@@ -195,8 +205,13 @@ export const PROPERTIES: Property[] = [
       { label: "Guest Residences", value: "2 Detached Independent Suites" }
     ],
     heroImage: "/media/residences/belvedere-hero.jpg",
-    posterImage: "/media/posters/hero-villa-poster.jpg",
-    videoUrl: "/media/videos/hero-villa.mp4",
+    posterImage: "/media/emaar/posters/palace-beach-residence.webp",
+    emaarVideo: {
+      id: "5rEh1yJt6WA",
+      title: "Palace Beach Residence by Emaar",
+      embedUrl: "https://www.youtube-nocookie.com/embed/5rEh1yJt6WA",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=2000&q=85",
@@ -266,7 +281,13 @@ export const PROPERTIES: Property[] = [
       { label: "Wine & Spirits Storage", value: "Dual-Zone Humidor & 800-Bottle Cellar" }
     ],
     heroImage: "/media/residences/mayfair-hero.jpg",
-    posterImage: "/media/posters/interior-living-poster.jpg",
+    posterImage: "/media/emaar/posters/address-residences-the-bay.webp",
+    emaarVideo: {
+      id: "j7CHAFRVCc4",
+      title: "Address Residences The Bay",
+      embedUrl: "https://www.youtube-nocookie.com/embed/j7CHAFRVCc4",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85",
@@ -336,7 +357,13 @@ export const PROPERTIES: Property[] = [
       { label: "Heating Technology", value: "100% Geothermal Closed-Loop Array" }
     ],
     heroImage: "/media/residences/solaris-hero.jpg",
-    posterImage: "/media/posters/hero-villa-poster.jpg",
+    posterImage: "/media/emaar/posters/arabian-ranches-iii.webp",
+    emaarVideo: {
+      id: "Yzbvd7KJvjg",
+      title: "Arabian Ranches III by Emaar",
+      embedUrl: "https://www.youtube-nocookie.com/embed/Yzbvd7KJvjg",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=2000&q=85",
@@ -406,8 +433,13 @@ export const PROPERTIES: Property[] = [
       { label: "Automotive Storage", value: "4 Air-Conditioned Display Bays" }
     ],
     heroImage: "/media/residences/lumina-hero.jpg",
-    posterImage: "/media/posters/hero-villa-poster.jpg",
-    videoUrl: "/media/videos/hero-villa.mp4",
+    posterImage: "/media/emaar/posters/the-heights-country-club.webp",
+    emaarVideo: {
+      id: "47c2B2qL4hg",
+      title: "The Heights Country Club & Wellness by Emaar",
+      embedUrl: "https://www.youtube-nocookie.com/embed/47c2B2qL4hg",
+      attribution: "Official Developer Film by Emaar Dubai"
+    },
     galleryImages: [
       {
         url: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=2000&q=85",

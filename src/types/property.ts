@@ -38,6 +38,12 @@ export interface Property {
     aspectRatio?: "landscape" | "portrait" | "wide";
   }[];
   videoUrl?: string;
+  emaarVideo?: {
+    id: string;
+    title: string;
+    embedUrl: string;
+    attribution: string;
+  };
   posterImage: string;
   featured: boolean;
   editorialHighlight?: string;

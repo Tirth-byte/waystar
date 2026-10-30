@@ -1,122 +1,136 @@
 import { Suspense } from "react";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import ContactForm from "@/components/contact/ContactForm";
-import { Mail, MapPin, ShieldCheck, Compass } from "lucide-react";
+import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
+import BackgroundVideo from "@/components/cinematic/BackgroundVideo";
+import ViewingRequestForm from "@/components/forms/ViewingRequestForm";
+import { Mail, Phone, ShieldCheck } from "lucide-react";
+
+export const metadata = {
+  title: "Private Client Advisory & Viewings | WAYSTAR",
+  description:
+    "Arrange confidential private viewings and portfolio consultations across Dubai and New York City with WAYSTAR senior advisors.",
+};
 
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
+      <SiteHeader />
+      <main className="flex-1 bg-[#0B0D0C] text-[#F4F1EB]">
+        {/* Full-Bleed 55svh Cinematic Advisory Canvas */}
+        <section className="relative w-full h-[55svh] min-h-[420px] flex items-end pb-12 sm:pb-16 overflow-hidden border-b border-white/10">
+          <BackgroundVideo
+            src="/media/v2/new-york/manhattan-midtown-aerial.mp4"
+            poster="/media/v2/posters/manhattan-midtown-aerial.webp"
+            priority
+            overlay="bottom"
+          />
 
-      <main className="flex-1 bg-[#F7F6F2] text-[#20211F]">
-        {/* Header Banner */}
-        <section className="bg-[#20211F] text-[#F7F6F2] pt-32 pb-16 sm:pb-24 border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-4">
-            <span className="text-[11px] uppercase tracking-[0.35em] text-[#B9A994] block">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full space-y-3">
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.35em] text-[#C1AD91] font-medium block">
               Private Client Advisory
             </span>
-            <h1 className="font-serif text-4xl sm:text-6xl font-light text-[#FFFFFF] tracking-tight">
+            <h1 className="font-serif text-4xl sm:text-6xl font-light text-white tracking-tight drop-shadow-md">
               Request Private Viewing
             </h1>
-            <p className="text-sm sm:text-base text-[#E6DED0]/85 max-w-2xl font-light leading-relaxed">
-              Appointments are arranged in strict confidence. Connect with our client advisory team to review architectural dossiers, coordinate travel arrangements, or schedule private viewings.
+            <p className="text-xs sm:text-base text-[#A6A39E] max-w-2xl font-light leading-relaxed">
+              Appointments arranged in strict confidence. Access confidential architectural dossiers, coordinate bespoke private flights, or arrange exclusive penthouse viewings.
             </p>
           </div>
         </section>
 
-        {/* Content Section */}
+        {/* Form and Global Private Offices Section */}
         <section className="py-16 sm:py-24 max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Form Column (7 Cols) */}
             <div className="lg:col-span-7">
               <Suspense
                 fallback={
-                  <div className="bg-[#20211F] p-12 text-center text-[#B9A994] text-xs uppercase tracking-widest animate-pulse border border-white/15">
+                  <div className="bg-[#111311] p-12 text-center text-[#C1AD91] text-xs uppercase tracking-widest animate-pulse border border-white/10">
                     Loading confidential enquiry module...
                   </div>
                 }
               >
-                <ContactForm />
+                <ViewingRequestForm />
               </Suspense>
             </div>
 
-            {/* Advisory Desks Column (5 Cols) */}
+            {/* Offices & Advisory Desks (5 Cols) */}
             <div className="lg:col-span-5 space-y-8">
-              {/* Regional Advisory Desks */}
-              <div className="bg-white border border-[#E6DED0] p-8 space-y-6 shadow-sm">
-                <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-[#55544F]">
-                  <Compass className="w-4 h-4 text-[#B9A994]" />
-                  <span>Demonstration Advisory Desks</span>
+              {/* Dubai Desk */}
+              <div className="p-8 border border-white/10 bg-[#111311] space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C1AD91] font-mono">
+                    MIDDLE EAST DESK
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    GST +4
+                  </span>
                 </div>
-                <h3 className="font-serif text-2xl font-light text-[#20211F]">
-                  Regional Desks
+                <h3 className="font-serif text-2xl font-light text-white">
+                  Dubai Private Office
                 </h3>
-
-                <div className="space-y-6 text-xs text-[#55544F]">
-                  <div className="space-y-1.5 border-b border-[#E6DED0] pb-4">
-                    <span className="font-medium text-[#20211F] text-sm block">
-                      Monaco & Mediterranean Concierge
-                    </span>
-                    <p className="flex items-center space-x-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#B9A994] shrink-0" />
-                      <span>Avenue Princesse Grace, MC 98000 Monaco</span>
-                    </p>
-                    <p className="text-[11px] text-[#B9A994]">
-                      Demonstration desk • Client consultations by confidential appointment
-                    </p>
+                <p className="text-xs text-[#A6A39E] leading-relaxed">
+                  Gate Precinct 04, Level 14, DIFC & Dubai Marina Promenade, Dubai, United Arab Emirates.
+                </p>
+                <div className="space-y-2 pt-2 text-xs font-mono text-[#F4F1EB]/80">
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-3.5 h-3.5 text-[#C1AD91]" />
+                    <span>+971 4 818 9000</span>
                   </div>
-
-                  <div className="space-y-1.5 border-b border-[#E6DED0] pb-4">
-                    <span className="font-medium text-[#20211F] text-sm block">
-                      London & European Salons
-                    </span>
-                    <p className="flex items-center space-x-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#B9A994] shrink-0" />
-                      <span>Berkeley Square, Mayfair, London W1J</span>
-                    </p>
-                    <p className="text-[11px] text-[#B9A994]">
-                      Demonstration desk • Portfolio viewing arrangements
-                    </p>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <span className="font-medium text-[#20211F] text-sm block">
-                      Asia-Pacific Atelier
-                    </span>
-                    <p className="flex items-center space-x-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#B9A994] shrink-0" />
-                      <span>Higashiyama-ku, Kyoto 605-0073, Japan</span>
-                    </p>
-                    <p className="flex items-center space-x-2">
-                      <Mail className="w-3.5 h-3.5 text-[#B9A994] shrink-0" />
-                      <span>advisory@waystar-concept.internal</span>
-                    </p>
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-3.5 h-3.5 text-[#C1AD91]" />
+                    <span>dubai@waystar-residences.com</span>
                   </div>
                 </div>
               </div>
 
-              {/* Security & Academic Notice */}
-              <div className="bg-[#20211F] text-[#F7F6F2] p-8 border border-white/10 space-y-4 shadow-lg">
-                <div className="flex items-center space-x-2 text-[#B9A994]">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span className="text-[10px] uppercase tracking-[0.25em]">
-                    Academic Privacy Notice
+              {/* New York Desk */}
+              <div className="p-8 border border-white/10 bg-[#111311] space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#C1AD91] font-mono">
+                    AMERICAS DESK
+                  </span>
+                  <span className="text-[10px] text-emerald-400 font-mono tracking-widest uppercase flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    EST -5
                   </span>
                 </div>
-                <h4 className="font-serif text-xl font-light text-[#FFFFFF]">
-                  Local Simulation Safe
-                </h4>
-                <p className="text-xs text-[#E6DED0]/80 font-light leading-relaxed">
-                  As part of the AI-Assisted Web Application End Semester Examination, all submitted details are saved strictly to your local browser storage. No data is transmitted to third parties or real commercial brokers.
+                <h3 className="font-serif text-2xl font-light text-white">
+                  New York Flagship Office
+                </h3>
+                <p className="text-xs text-[#A6A39E] leading-relaxed">
+                  111 West 57th Street, Floor 48, Billionaires&apos; Row, Manhattan, New York 10019.
+                </p>
+                <div className="space-y-2 pt-2 text-xs font-mono text-[#F4F1EB]/80">
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-3.5 h-3.5 text-[#C1AD91]" />
+                    <span>+1 (212) 890-4400</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-3.5 h-3.5 text-[#C1AD91]" />
+                    <span>newyork@waystar-residences.com</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Security & Confidentiality Charter */}
+              <div className="p-6 border border-white/10 bg-black/40 space-y-3">
+                <div className="flex items-center space-x-2 text-[#C1AD91]">
+                  <ShieldCheck className="w-4 h-4" />
+                  <span className="text-[11px] uppercase tracking-[0.2em] font-medium">
+                    Strict Confidentiality
+                  </span>
+                </div>
+                <p className="text-xs text-[#A6A39E] leading-relaxed">
+                  All transactions, client identities, and private floorplans are bound by non-disclosure protocols. Encrypted communications available upon request.
                 </p>
               </div>
             </div>
           </div>
         </section>
       </main>
-
-      <Footer />
+      <SiteFooter />
     </>
   );
 }
